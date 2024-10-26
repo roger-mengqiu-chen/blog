@@ -1,11 +1,12 @@
 import Avatar from '@mui/material/Avatar';
+import Link from 'next/link';
 
 
 const Logo = () => {
 	return (
-		<a href="/">
+		<Link href="/">
 			<Avatar src="/icon.jpeg" alt="logo" />
-		</a>
+		</Link>
 	);
 }
 
