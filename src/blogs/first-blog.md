@@ -1,7 +1,7 @@
 ---
 title: "First Blog"
 description: "This is my first blog"
-date: "2024-10-26"
+time: "2024-10-26 12:00:00"
 ---
 
 # First Blog
