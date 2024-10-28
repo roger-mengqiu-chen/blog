@@ -2,7 +2,7 @@ import { getPostMetadata, PostMetadata } from '@/utils/getPostMetadata';
 import { Box } from '@mui/material';
 import Post from '@/components/post';
 
-export const Main = () => {
+const Main = () => {
 	const postMetaData = getPostMetadata('src/blogs');
 	console.log(postMetaData);
 	return (
