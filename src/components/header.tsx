@@ -20,7 +20,7 @@ import Logo from '@/components/logo';
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Projects', 'Readings'];
 
-export default function ResponsiveAppBar() {
+export const ResponsiveAppBar = () => {
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -90,3 +90,5 @@ export default function ResponsiveAppBar() {
     </>
   );
 }
+
+export default ResponsiveAppBar;

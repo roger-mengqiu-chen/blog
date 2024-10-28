@@ -1,4 +1,4 @@
-export default function BlogPage() {
+export const BlogPag = () => {
 
   return (
     <div>
@@ -6,3 +6,5 @@ export default function BlogPage() {
     </div>
   );
 }
+
+export default BlogPag;
