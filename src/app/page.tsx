@@ -1,4 +1,3 @@
-"use client";
 
 import ResponsiveAppBar from "@/components/header";
 import Box from '@mui/material/Box';
