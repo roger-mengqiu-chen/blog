@@ -1,6 +1,6 @@
 import { getPostMetadata, PostMetadata } from '@/utils/getPostMetadata';
 import { Box } from '@mui/material';
-import Post from '@/components/post';
+import Post from '@/components/home/post';
 
 const Main = () => {
 	const postMetaData = getPostMetadata('src/blogs');
