@@ -1,5 +1,5 @@
 
-import ResponsiveAppBar from "@/components/header";
+import ResponsiveAppBar from "@/components/header/header";
 import Box from '@mui/material/Box';
 import Main from '@/components/main';
 

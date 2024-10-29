@@ -14,7 +14,9 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import Logo from '@/components/logo';
+import Logo from '@/components/header/logo';
+import { Typography } from '@mui/material';
+import Brand from './brand';
 
 
 const drawerWidth = 240;
@@ -30,6 +32,7 @@ export const ResponsiveAppBar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+			<Brand />
       <Divider />
       <List>
         {navItems.map((item) => (
