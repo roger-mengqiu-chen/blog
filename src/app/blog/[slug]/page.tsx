@@ -39,11 +39,9 @@ const BlogPag: React.FC<BlogPageProps> = ({ params }) => {
   const post = getPostContent(slug);
   console.log(post);
   return (
-    <main>
-      <article>
-        <Markdown>{post.content}</Markdown>
-      </article>
-    </main>
+    <article>
+      <Markdown>{post.content}</Markdown>
+    </article>
   );
 }
 
