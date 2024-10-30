@@ -32,8 +32,6 @@ export const ResponsiveAppBar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-			<Brand />
-      <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -61,9 +59,14 @@ export const ResponsiveAppBar = () => {
             <MenuIcon />
           </IconButton>
 
-					<Box sx={{ display: { xs: 'flex', sm: 'block' }, justifyContent: 'flex-end', alignItems: 'center', flexGrow: 1 }}>
+					<Box 
+            sx={{ 
+              display: { xs: 'flex', sm: 'block' }, 
+              justifyContent: 'flex-end', 
+              alignItems: 'center' }}>
 						<Logo />
 					</Box>
+          <Brand />
           
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
