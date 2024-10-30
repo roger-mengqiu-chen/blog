@@ -28,7 +28,7 @@ export const ResponsiveAppBar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', p: 3 }}>
       <Toolbar />
       <List>
         {navItems.map((item) => (
