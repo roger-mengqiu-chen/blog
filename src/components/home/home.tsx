@@ -6,7 +6,7 @@ const Main = () => {
 	const postMetaData = getPostMetadata('src/blogs');
 
 	return (
-		<Box sx={{ flexGrow: 1, p: 3}}>
+		<Box>
 			<Toolbar />
 			{postMetaData.map((post: PostMetadata) => {
 				return (
