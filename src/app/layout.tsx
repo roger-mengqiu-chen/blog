@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import Header from "@/components/header/header";
 import { Toolbar, Box } from "@mui/material";
 
