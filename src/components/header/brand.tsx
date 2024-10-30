@@ -5,7 +5,7 @@ const Brand = () => {
 	return (
 		<Box className={styles.brand_box}>
 			<Typography className={styles.brand_typography}>
-				CR BLOG
+				Roger Chen
 			</Typography>
 		</Box>
 	)

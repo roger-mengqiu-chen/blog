@@ -17,7 +17,6 @@ import Logo from '@/components/header/logo';
 import Brand from './brand';
 
 
-const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Projects', 'Readings'];
 
 export const ResponsiveAppBar = () => {
@@ -30,6 +29,7 @@ export const ResponsiveAppBar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Toolbar />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -85,7 +85,7 @@ export const ResponsiveAppBar = () => {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: "100%" },
           }}
         >
           {drawer}

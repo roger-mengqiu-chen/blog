@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header/header";
-import { Toolbar, Box } from "@mui/material";
+import { Box } from "@mui/material";
 
 
 export const metadata: Metadata = {
@@ -17,9 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <Box component="main" sx={{ p: 3 }}>
-          <Toolbar />
-          {children}
+        <Box sx={{ display: 'flex', p: 3 }}>
+          <Box component="main" sx={{ flexGrow: 1, ml: 3 }}>
+            {children}
+          </Box>
         </Box>
       </body>
     </html>
