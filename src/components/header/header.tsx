@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from 'react';
+import Link from 'next/link';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -17,7 +18,12 @@ import Logo from '@/components/header/logo';
 import Brand from './brand';
 
 
-const navItems = ['Home', 'About', 'Projects', 'Readings'];
+const navItems = [
+  {item: 'Home', link: '/'},
+  {item: 'About', link: '/about'},
+  {item: 'Projects', link: '/projects'},
+  {item: 'Readings', link: '/readings'}
+];
 
 export const ResponsiveAppBar = () => {
 
@@ -31,11 +37,13 @@ export const ResponsiveAppBar = () => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', p: 3 }}>
       <Toolbar />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+        {navItems.map(({ item, link }) => (
+          <ListItem key={ item } disablePadding>
+            <Link href={ link }>
+              <ListItemButton sx={{ textAlign: 'center' }}>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -67,10 +75,12 @@ export const ResponsiveAppBar = () => {
           <Brand />
           
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
+            {navItems.map(({item, link}) => (
+              <Link key={item} href={link} passHref>
+                <Button key={item} sx={{ color: '#fff' }}>
+                  {item}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
