@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <Header />
         <Box sx={{ display: 'flex', p: 3 }}>
-          <Box component="main" sx={{ flexGrow: 1, ml: 3 }}>
+          <Box component="main" sx={{ flexGrow: 1 }}>
             {children}
           </Box>
         </Box>

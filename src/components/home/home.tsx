@@ -15,6 +15,7 @@ const Main = () => {
             title={post.title}
             description={post.description}
             time={post.time}
+						thumbnail={post.thumbnail}
             slug={post.slug}
           />
 				);

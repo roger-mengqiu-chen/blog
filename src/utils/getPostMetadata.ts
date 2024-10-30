@@ -5,6 +5,7 @@ export interface PostMetadata {
   title: string;
   description: string;
   time: string;
+  thumbnail: string;
   slug: string;
 }
 
@@ -22,6 +23,7 @@ export const getPostMetadata = (fpName: string) => {
 			title: matterResult.data.title,
 			description: matterResult.data.description,
 			time: matterResult.data.time,
+			thumbnail: matterResult.data.thumbnail,
 			slug: slug,
 		};
 	});
