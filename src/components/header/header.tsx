@@ -45,7 +45,7 @@ export const ResponsiveAppBar = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" position="fixed" sx= {{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <IconButton
             color="inherit"
