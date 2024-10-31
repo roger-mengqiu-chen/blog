@@ -12,7 +12,12 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 			<Link href={`/blog/${post.slug}`} className={styles.post_link}>
 				<Box className={styles.card_content}>
 					<Box className={styles.thumbnail_container}>
-						<Image src={defaultThumbnail} alt={post.title} width={0} height={0} className={ styles.thumbnail }/>
+						<Image src={post.thumbnail ? post.thumbnail : defaultThumbnail} 
+						  alt={post.title} 
+						  width={0} 
+						  height={0} 
+						  className={ styles.thumbnail } 
+						  priority={ true } />
 					</Box>
 					<Box>
 						<Typography className={styles.title}>{post.title}</Typography>

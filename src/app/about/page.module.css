@@ -1,12 +1,23 @@
 .about {
-    padding: 1rem;
-    margin-left: 20%;
-    margin-right: 20%
+	padding: 1rem;
+	margin-left: 20%;
+	margin-right: 20%;
+	opacity: 0;
+	animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 768px) {
-    .about {
-        margin-left: 0;
-        margin-right: 0;
-    }
+	.about {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
