@@ -16,7 +16,7 @@ const getPostContent = (slug: string) => {
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata("src/blogs");
-  const blogs = posts.filter((post) => post.category === "blog");
+  const blogs = posts.filter((post) => post.category === "project");
   return blogs.map((post) => ({ slug: post.slug }));
 }
 
@@ -36,7 +36,7 @@ interface BlogPageProps {
   };
 }
 
-const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
+const ProjectPage: React.FC<BlogPageProps> = ({ params }) => {
   const { slug } = params;
   const post = getPostContent(slug);
   console.log(post);
@@ -48,4 +48,4 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   );
 }
 
-export default BlogPage;
+export default ProjectPage;

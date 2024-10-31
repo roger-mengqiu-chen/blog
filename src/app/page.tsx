@@ -1,10 +1,12 @@
 import Main from '@/components/home/home';
 
 
-export default function Home() {
+const Home = () => {
   return (
     <>
-      <Main />
+      <Main category="blog" />
     </>
   );
 }
+
+export default Home;

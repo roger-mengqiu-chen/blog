@@ -3,19 +3,24 @@ import { Box, Toolbar } from '@mui/material';
 import Post from '@/components/home/post';
 import styles from '@/components/home/home.module.css';
 
-const Main = () => {
-	const postMetaData = getPostMetadata('src/blogs');
+interface Props {
+	category: string;
+}	
 
+const Main: React.FC<Props> = ({ category }) => {
+	const postMetaData = getPostMetadata('src/blogs');
+	const blogs = postMetaData.filter((post: PostMetadata) => post.category === category);
 	return (
 		<Box>
 			<Toolbar />
-			{postMetaData.map((post: PostMetadata) => {
+			{blogs.map((post: PostMetadata) => {
 				return (
 					<div className={styles.postcard} key={post.slug}>
 						<Post
 							key={post.slug}
 							title={post.title}
 							description={post.description}
+							category={post.category}
 							tags={post.tags}
 							time={post.time}
 							thumbnail={post.thumbnail}

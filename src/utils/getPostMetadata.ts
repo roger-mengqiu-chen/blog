@@ -4,6 +4,7 @@ import matter from "gray-matter";
 export interface PostMetadata {
   title: string;
   description: string;
+	category: string;
 	tags: string[];
   time: string;
   thumbnail: string;
@@ -23,6 +24,7 @@ export const getPostMetadata = (fpName: string) => {
 		return {
 			title: matterResult.data.title,
 			description: matterResult.data.description,
+			category: matterResult.data.category,
 			tags: matterResult.data.tags,
 			time: matterResult.data.time,
 			thumbnail: matterResult.data.thumbnail,

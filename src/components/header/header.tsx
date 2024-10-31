@@ -20,7 +20,7 @@ import Brand from './brand';
 const navItems = [
   {item: 'Home', link: '/'},
   {item: 'About', link: '/about'},
-  {item: 'Projects', link: '/projects'},
+  {item: 'Projects', link: '/project'},
   {item: 'Readings', link: '/readings'}
 ];
 

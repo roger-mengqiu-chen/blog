@@ -6,10 +6,11 @@ import Image from 'next/image';
 
 export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 	const defaultThumbnail = "/images/default-thumbnail.jpg";	
+	const category = post.category;
 	
 	return (
 		<Paper elevation={3} className={styles.card}>
-			<Link href={`/blog/${post.slug}`} className={styles.post_link}>
+			<Link href={`/${category}/${post.slug}`} className={styles.post_link}>
 				<Box className={styles.card_content}>
 					<Box className={styles.thumbnail_container}>
 						<Image src={post.thumbnail ? post.thumbnail : defaultThumbnail} 
