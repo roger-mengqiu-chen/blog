@@ -16,6 +16,7 @@
 
 .card_content {
 	display: flex;
+	color: black;
 }
 
 .post_link {

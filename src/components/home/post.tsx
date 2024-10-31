@@ -10,7 +10,7 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 	
 	return (
 		<Paper elevation={3} className={styles.card}>
-			<Link href={`/${category}/${post.slug}`} className={styles.post_link}>
+			<Link href={`/${category}/${post.slug}`} className={styles.post_link} underline="none">
 				<Box className={styles.card_content}>
 					<Box className={styles.thumbnail_container}>
 						<Image src={post.thumbnail ? post.thumbnail : defaultThumbnail} 
@@ -21,12 +21,12 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 						  priority={ true } />
 					</Box>
 					<Box>
-						<Typography className={styles.title}>{post.title}</Typography>
-						<Typography variant="body2">{post.time}</Typography>
+						<p className={styles.title}>{post.title}</p>
+						<p>{post.time}</p>
 						<Box className={styles.tags}>
 							{post.tags.map((tag: string) => {
 								return (
-									<Typography key={tag} className={styles.tag}>{tag}</Typography>
+									<p key={tag} className={styles.tag}>{tag}</p>
 								)
 							})}
 							</Box>

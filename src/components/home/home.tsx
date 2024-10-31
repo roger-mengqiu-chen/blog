@@ -1,5 +1,5 @@
 import { getPostMetadata, PostMetadata } from '@/utils/getPostMetadata';
-import { Box, Toolbar } from '@mui/material';
+import { Box } from '@mui/material';
 import Post from '@/components/home/post';
 import styles from '@/components/home/home.module.css';
 
@@ -12,7 +12,6 @@ const Main: React.FC<Props> = ({ category }) => {
 	const blogs = postMetaData.filter((post: PostMetadata) => post.category === category);
 	return (
 		<Box>
-			<Toolbar />
 			{blogs.map((post: PostMetadata) => {
 				return (
 					<div className={styles.postcard} key={post.slug}>

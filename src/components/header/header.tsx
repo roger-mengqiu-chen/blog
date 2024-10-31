@@ -54,13 +54,13 @@ export const ResponsiveAppBar = () => {
       <CssBaseline />
       <AppBar component="nav" position="fixed" sx= {{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', flexGrow: 1}}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', flexGrow: 1, margin: 0 }}>
             <Box sx={{ display: 'flex' }}>
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
                 edge="start"
-                onClick={handleDrawerToggle}
+                onClick={ handleDrawerToggle }
                 sx={{ mr: 2, display: { sm: 'none' } }}
               >
                 <MenuIcon />
