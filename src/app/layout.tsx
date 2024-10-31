@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import Article from "@/components/home/article";
 import { Box } from "@mui/material";
 
 
@@ -20,7 +21,9 @@ export default function RootLayout({
         <Header />
         <Box sx={{ display: 'flex', p: 3 }}>
           <Box component="main" sx={{ flexGrow: 1 }}>
-            {children}
+            <Article>
+              {children}
+            </Article>
           </Box>
         </Box>
         <Footer />

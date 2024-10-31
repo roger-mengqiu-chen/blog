@@ -1,7 +1,5 @@
 .about {
 	padding: 1rem;
-	margin-left: 20%;
-	margin-right: 20%;
 	opacity: 0;
 	animation: fadeIn 1.2s ease-in-out forwards;
 }
@@ -17,7 +15,8 @@
 
 @media (max-width: 768px) {
 	.about {
-		margin-left: 0;
-		margin-right: 0;
+		padding: 0.5rem;
+		margin-left: -0.5rem;
+		margin-right: -0.5rem;
 	}
 }
