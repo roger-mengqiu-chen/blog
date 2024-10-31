@@ -1,6 +1,9 @@
 ---
 title: "First Blog"
 description: "This is my first blog"
+tags: 
+    - tag1
+    - tag2
 time: "2024-10-26 12:00:00"
 ---
 

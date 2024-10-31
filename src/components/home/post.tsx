@@ -17,6 +17,13 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 					<Box>
 						<Typography className={styles.title}>{post.title}</Typography>
 						<Typography variant="body2">{post.time}</Typography>
+						<Box className={styles.tags}>
+							{post.tags.map((tag: string) => {
+								return (
+									<Typography key={tag} className={styles.tag}>{tag}</Typography>
+								)
+							})}
+							</Box>
 						<Typography variant="body1">{post.description}</Typography>
 					</Box>
 				</Box>
