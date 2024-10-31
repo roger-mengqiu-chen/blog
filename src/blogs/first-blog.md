@@ -1,6 +1,7 @@
 ---
 title: "First Blog"
 description: "This is my first blog"
+category: "blog"
 tags: 
     - tag1
     - tag2

@@ -1,6 +1,7 @@
 ---
 title: "Second Blog"
 description: "This is my second blog"
+category: "blog"
 tags: 
     - tag2
     - tag3
