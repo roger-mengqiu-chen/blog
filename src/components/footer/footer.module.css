@@ -1,0 +1,24 @@
+.footer {
+    padding: 1.5rem;
+    height: 100px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    font-size: 14px;
+    color: #495057;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quote {
+    font-size: 14px;
+    color: #868e96;
+    margin-bottom: 10px;
+}
+
+.link {
+    color: black;
+}
+
+.footer_icon {
+    width: 30px;
+}

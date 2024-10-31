@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 import { Box } from "@mui/material";
 
 
@@ -22,6 +23,7 @@ export default function RootLayout({
             {children}
           </Box>
         </Box>
+        <Footer />
       </body>
     </html>
   );
