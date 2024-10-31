@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 
 const Logo = () => {
 	return (
-		<Box sx={{ display: 'flex', alignItems: 'center' }}>
+		<Box sx={{ display: 'flex', alignItems: 'center', ml: '0.5rem', mr: '0.5rem' }}>
       <Link href="/" passHref>
         <Avatar src="/icon.jpeg" alt="logo" />
       </Link>

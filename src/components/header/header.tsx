@@ -55,33 +55,29 @@ export const ResponsiveAppBar = () => {
       <CssBaseline />
       <AppBar component="nav" position="fixed" sx= {{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', flexGrow: 1}}>
+            <Box sx={{ display: 'flex' }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: 'none' } }}
+              >
+                <MenuIcon />
+              </IconButton>
 
-					<Box 
-            sx={{ 
-              display: { xs: 'flex', sm: 'block' }, 
-              justifyContent: 'flex-end', 
-              alignItems: 'center' }}>
-						<Logo />
-					</Box>
-          <Brand />
-          
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map(({item, link}) => (
-              <Link key={item} href={link} passHref>
-                <Button key={item} sx={{ color: '#fff' }}>
-                  {item}
-                </Button>
-              </Link>
-            ))}
+              <Brand />
+            </Box>
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
+              {navItems.map(({item, link}) => (
+                <Link key={item} href={link} passHref>
+                  <Button key={item} sx={{ color: '#fff' }}>
+                    {item}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
