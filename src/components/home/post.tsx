@@ -1,4 +1,4 @@
-import { Paper, Box, Typography, Link } from "@mui/material";
+import { Paper, Box, Stack, Link, Chip } from "@mui/material";
 import { PostMetadata } from "@/utils/getPostMetadata";
 import React from "react";
 import styles from '@/components/home/post.module.css';
@@ -20,17 +20,18 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 						  className={ styles.thumbnail } 
 						  priority={ true } />
 					</Box>
-					<Box>
-						<p className={styles.title}>{post.title}</p>
-						<p>{post.time}</p>
-						<Box className={styles.tags}>
+					<Box className={styles.card_brief}>
+						<Box className={styles.title}>{post.title}</Box>
+						
+						<Box>{post.description}</Box>
+						<Stack className={styles.tags} direction="row">
 							{post.tags.map((tag: string) => {
 								return (
-									<p key={tag} className={styles.tag}>{tag}</p>
+									<Chip key={tag} className={styles.tag} label={tag} />
 								)
 							})}
-							</Box>
-						<Typography variant="body1">{post.description}</Typography>
+						</Stack>
+						
 					</Box>
 				</Box>
 			</Link>

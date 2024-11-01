@@ -1,7 +1,27 @@
+.card_brief {
+	flex-grow: 1;
+	padding-left: 2rem;
+}
+
+.title_time {
+	display: flex;
+	justify-content: space-between;
+}
+
 .title {
-	font-size: 2rem;
-	font-weight: 700;
+	font-size: 1.5rem;
+	font-weight: 520;
 	margin-bottom: 0.5rem;
+}
+
+.time {
+	font-size: 0.8rem;
+	color: #6c757d;
+	margin-bottom: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	
 }
 
 .card {
@@ -37,6 +57,24 @@
 	width: auto;
 }
 
+
+
+.tags {
+	
+	margin-top: 0.5rem;
+}
+
+.tag {
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: black;
+	font-size: 0.8rem;
+}
+
 @media (max-width: 768px) {
 	.card {
 		padding: 0.5rem;
@@ -46,5 +84,14 @@
 
 	.card_content {
 		flex-direction: column;
+	}
+
+	.card_brief {
+		padding-left: 0.2rem;
+		padding-right: 0.2rem;
+	}
+
+	.tags {
+		justify-content: end;
 	}
 }
