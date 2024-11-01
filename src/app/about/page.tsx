@@ -1,10 +1,9 @@
-import { Paper, Toolbar } from "@mui/material";
+import { Paper } from "@mui/material";
 import styles from '@/app/about/page.module.css';
 
 const AboutPage = () => {
 	return(
 		<>
-			<Toolbar />
 			<Paper elevation={3} className={styles.about}>
 				<p>Hi, my name is Mengqiu, a full stack developer currently working in DataDrill Communications. My friends usually call me Roger.</p>
 
