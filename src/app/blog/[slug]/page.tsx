@@ -1,5 +1,5 @@
 import Markdown from "markdown-to-jsx";
-import { Box, Toolbar } from "@mui/material";
+import { Box } from "@mui/material";
 import { getPostMetadata } from "@/utils/getPostMetadata";
 import React from "react";
 import * as fs from 'fs';
@@ -39,7 +39,7 @@ interface BlogPageProps {
 const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   const { slug } = params;
   const post = getPostContent(slug);
-  console.log(post);
+
   return (
     <Box component="article">
       <Markdown>{post.content}</Markdown>
