@@ -42,7 +42,6 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   console.log(post);
   return (
     <Box component="article">
-      <Toolbar />
       <Markdown>{post.content}</Markdown>
     </Box>
   );
