@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import styles from '@/components/home/custom_image.module.css';
 
 interface CustomImageProps {
   src: string;
@@ -8,8 +9,8 @@ interface CustomImageProps {
 const CustomImage = ({ src, alt }: CustomImageProps) => {
   src = "../images/" + src;
   return (
-    <Image src={src} alt={alt} width={600} height={400} />
-  )  
+    <Image src={src} alt={alt} width={600} height={400} className={styles.post_image}/>
+  )
 }
 
 export default CustomImage;
