@@ -12,6 +12,8 @@ time: "2024-10-26 12:00:00"
 
 This is my first blog. I am so excited to start my blogging journey.
 
+![th](../images/default-thumbnail.jpg)
+
 ```python
 print('hello')
 ```
