@@ -4,6 +4,7 @@ import { getPostMetadata } from "@/utils/getPostMetadata";
 import React from "react";
 import * as fs from 'fs';
 import matter from "gray-matter";
+import CustomImage from "@/components/home/custom_image";
 
 
 const getPostContent = (slug: string) => {
@@ -42,7 +43,14 @@ const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
 
   return (
     <Box component="article">
-      <Markdown>{post.content}</Markdown>
+      <Markdown
+        options={{
+        overrides: {
+          img: {
+            component: CustomImage,
+          },
+        },
+      }}>{post.content}</Markdown>
     </Box>
   );
 }
