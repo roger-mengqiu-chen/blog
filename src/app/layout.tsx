@@ -17,7 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css" precedence="default"
+        />
+      </head>
       <body>
+      
+
         <Header />
         <Box sx={{ display: 'flex', p: 3 }}>
           <Box component="main" sx={{ flexGrow: 1 }}>
