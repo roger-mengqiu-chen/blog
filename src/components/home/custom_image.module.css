@@ -1,13 +1,9 @@
 .post_image {
   display: block;
   height: auto;
-  width: auto;
+  max-width: min-content;
+  width: 100%;
+  border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .post_image {
-    width: 100%;
-  }
 }

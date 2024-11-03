@@ -3,9 +3,25 @@
   margin-right: 20%;
 }
 
+.article code {
+  width: auto;
+  display: block;
+  white-space: pre-wrap;
+  overflow-x: scroll; /* Add scrollbars if necessary */
+  border-radius: 10px; 
+}
+
 @media (max-width: 768px) {
   .article {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .article code {
+    width: auto;
+    display: block;
+    white-space: pre-wrap;
+    overflow-x: scroll; /* Add scrollbars if necessary */
+    border-radius: 10px; 
   }
 }

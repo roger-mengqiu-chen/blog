@@ -14,4 +14,8 @@ This is my first blog. I am so excited to start my blogging journey.
 
 ![th](default-thumbnail.jpg)
 
+```python
+print("Hello World")
+# This is a test to see how front end can handle a long line of code. It should show a horizontal scroll bar.
+```
 
