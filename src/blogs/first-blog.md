@@ -15,5 +15,6 @@ This is my first blog. I am so excited to start my blogging journey.
 ![th](default-thumbnail.jpg)
 
 ```python
-print('hello')
+print('hello. This is a long long code block to see if it\'s scrollable.')
+# This is a long line comment and is used to test the scrollable code block.
 ```
