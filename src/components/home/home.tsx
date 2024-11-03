@@ -1,4 +1,4 @@
-import { getPostMetadata, PostMetadata } from '@/utils/getPostMetadata';
+import { getPostMetadata, PostMetadata } from '@/utils/post_utils';
 import { Box } from '@mui/material';
 import Post from '@/components/home/post';
 import styles from '@/components/home/home.module.css';

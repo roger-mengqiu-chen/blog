@@ -1,5 +1,5 @@
 import { Paper, Box, Stack, Link, Chip } from "@mui/material";
-import { PostMetadata } from "@/utils/getPostMetadata";
+import { PostMetadata } from "@/utils/post_utils";
 import React from "react";
 import styles from '@/components/home/post.module.css';
 import Image from 'next/image';

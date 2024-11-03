@@ -1,6 +1,6 @@
 import Markdown from "markdown-to-jsx";
 import { Box } from "@mui/material";
-import { getPostMetadata } from "@/utils/getPostMetadata";
+import { getPostMetadata } from "@/utils/post_utils";
 import React from "react";
 import * as fs from 'fs';
 import matter from "gray-matter";
