@@ -8,11 +8,11 @@ interface Props {
 }	
 
 const Main: React.FC<Props> = ({ category }) => {
-	const postMetaData = getPostMetadata('src/blogs');
-	const blogs = postMetaData.filter((post: PostMetadata) => post.category === category);
+	const postMetaData = getPostMetadata(`src/data/${category}s`);
+	
 	return (
 		<Box>
-			{blogs.map((post: PostMetadata) => {
+			{postMetaData.map((post: PostMetadata) => {
 				return (
 					<div className={styles.postcard} key={post.slug}>
 						<Post

@@ -11,6 +11,12 @@ export interface PostMetadata {
   slug: string;
 }
 
+export interface BlogPageProps {
+  params: {
+    slug: string;
+  };
+}
+
 export const getPostMetadata = (fpName: string) => {
 	const folder = fpName + '/';
 	const files = fs.readdirSync(folder);
@@ -33,3 +39,11 @@ export const getPostMetadata = (fpName: string) => {
 	});
 	return posts;
 };
+
+export const getPostContent = (category: string, slug: string) => {
+  const file = `src/data/${category}/${slug}.md`;
+  const content = fs.readFileSync(file, "utf-8");
+
+  const matterResult = matter(content);
+  return matterResult;
+}

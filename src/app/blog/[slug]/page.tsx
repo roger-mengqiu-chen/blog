@@ -1,29 +1,19 @@
 import Markdown from "markdown-to-jsx";
 import { Box } from "@mui/material";
-import { getPostMetadata } from "@/utils/post_utils";
+import { getPostMetadata, getPostContent, BlogPageProps } from "@/utils/post_utils";
 import React from "react";
-import * as fs from 'fs';
-import matter from "gray-matter";
 import CustomImage from "@/components/home/custom_image";
 
 
-const getPostContent = (slug: string) => {
-  const file = `src/blogs/${slug}.md`;
-  const content = fs.readFileSync(file, "utf-8");
-
-  const matterResult = matter(content);
-  return matterResult;
-}
-
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata("src/blogs");
+  const posts = getPostMetadata("src/data/blogs");
   const blogs = posts.filter((post) => post.category === "blog");
   return blogs.map((post) => ({ slug: post.slug }));
 }
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-  const post = getPostContent(slug);
+  const post = getPostContent("blogs", slug);
 
   return {
     title: `Roger Chen's Blog ${slug}`,
@@ -31,15 +21,9 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
   }
 }
 
-interface BlogPageProps {
-  params: {
-    slug: string;
-  };
-}
-
 const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   const { slug } = params;
-  const post = getPostContent(slug);
+  const post = getPostContent("blogs", slug);
 
   return (
     <Box component="article">
