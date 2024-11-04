@@ -1,4 +1,4 @@
-.postcard {
+main {
 	opacity: 0;
 	animation: fadeIn 1.2s ease-in-out forwards;
 }

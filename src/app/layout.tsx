@@ -3,6 +3,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Article from "@/components/home/article";
 import { Box } from "@mui/material";
+import "./global.css"
 
 
 export const metadata: Metadata = {
