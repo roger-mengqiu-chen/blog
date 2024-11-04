@@ -90,7 +90,7 @@ export const ResponsiveAppBar = () => {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: "100%" },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
           }}
         >
           {drawer}
