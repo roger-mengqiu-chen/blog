@@ -27,7 +27,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <Box component="main">
+        <Box component="main" className="fly">
           <Article>
             {children}
           </Article>

@@ -13,7 +13,7 @@ export const Main: React.FC<Props> = ({ category }) => {
 	const postMetaData = getPostMetadata(`src/data/${category}`);
 	
 	return (
-		<Box>
+		<Box className="fly">
 			{postMetaData.map((post: PostMetadata) => {
 				return (
 					<Post
@@ -43,7 +43,7 @@ export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
 	const metaData = post.data;
 	
   return (
-    <Box component="article">
+    <Box component="article" className="fly">
 			<PostExcerpt
         title={metaData.title}
         description={metaData.description}
