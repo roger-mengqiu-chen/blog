@@ -1,8 +1,5 @@
-import Markdown from "markdown-to-jsx";
-import { Box } from "@mui/material";
-import { getPostContent } from "@/utils/post_utils";
 import React from "react";
-import CustomImage from "@/components/home/custom_image";
+import { PostMain } from "@/components/home/home";
 
 
 export const generateStaticParams = async () => {
@@ -17,20 +14,9 @@ export const generateMetadata = async () => {
 }
 
 const ReadingPage = () => {
-  const post = getPostContent("reading", "readings");
-
-  return (
-    <Box component="article">
-      <Markdown
-        options={{
-        overrides: {
-          img: {
-            component: CustomImage,
-          },
-        },
-      }}>{post.content}</Markdown>
-    </Box>
-  );
+	return (
+	<PostMain slug={"readings"} category="reading"/>
+	)
 }
 
 export default ReadingPage;

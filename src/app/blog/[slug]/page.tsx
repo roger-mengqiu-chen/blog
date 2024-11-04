@@ -1,8 +1,5 @@
-import Markdown from "markdown-to-jsx";
-import { Box } from "@mui/material";
 import { getPostMetadata, getPostContent, BlogPageProps } from "@/utils/post_utils";
 import React from "react";
-import CustomImage from "@/components/home/custom_image";
 import { PostMain } from "@/components/home/home";
 
 

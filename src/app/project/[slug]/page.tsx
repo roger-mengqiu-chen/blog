@@ -1,5 +1,3 @@
-import Markdown from "markdown-to-jsx";
-import { Box, Toolbar } from "@mui/material";
 import { getPostMetadata, getPostContent, BlogPageProps } from "@/utils/post_utils";
 import React from "react";
 import { PostMain } from "@/components/home/home";
