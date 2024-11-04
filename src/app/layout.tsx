@@ -3,6 +3,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Article from "@/components/home/article";
 import { Box } from "@mui/material";
+import { GoogleAnalytics } from '@next/third-parties/google' 
 import "./global.css"
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         </Box>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-D8TELP8YEW" />
     </html>
   );
 }
