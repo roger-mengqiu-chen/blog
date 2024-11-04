@@ -42,7 +42,6 @@ export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
   console.log(post);
 	const metaData = post.data;
 	
-	
   return (
     <Box component="article">
 			<PostExcerpt
@@ -56,12 +55,12 @@ export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
       />
       <Markdown
         options={{
-        overrides: {
-          img: {
-            component: CustomImage,
-          },
-        },
-      }}>{post.content}</Markdown>
+					overrides: {
+						img: {
+							component: CustomImage,
+						},
+					},
+				}}>{post.content}</Markdown>
     </Box>
   );
 }
