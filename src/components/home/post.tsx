@@ -31,7 +31,6 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 								)
 							})}
 						</Stack>
-						
 					</Box>
 				</Box>
 			</Link>
@@ -39,4 +38,22 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 	)
 }
 
-export default Post;
+export const PostExcerpt = (postMetaData: PostMetadata) => {
+	return (
+		<Box>
+			<Box className={styles.post_title}>
+				{postMetaData.title}
+			</Box>
+			<Box className={styles.post_time}>
+				{postMetaData.time}
+			</Box>
+			<Box className={styles.post_tags}>
+				{postMetaData.tags?.map((tag: string) => {
+					return (
+						<Chip key={tag} className={styles.tag} label={tag} />
+					)
+				})}
+			</Box>
+		</Box>
+	)
+}

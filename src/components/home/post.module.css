@@ -57,22 +57,40 @@
 	width: auto;
 }
 
-
-
 .tags {
 	
 	margin-top: 0.5rem;
 }
 
 .tag {
-	margin-left: 0.25rem;
-	margin-right: 0.25rem;
+	margin: 0.25rem;
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	color: black;
 	font-size: 0.8rem;
+}
+
+.post_title {
+	display: flex;
+	justify-content: space-around;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.post_time {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1rem;
+	color: #6c757d;
+}
+
+.post_tags {
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {

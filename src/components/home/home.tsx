@@ -1,6 +1,6 @@
-import { BlogPageProps, getPostContent, getPostMetadata, PostMetadata } from '@/utils/post_utils';
-import { Box, Toolbar } from '@mui/material';
-import Post from '@/components/home/post';
+import {  getPostContent, getPostMetadata, PostMetadata } from '@/utils/post_utils';
+import { Box } from '@mui/material';
+import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
 import CustomImage from '@/components/home/custom_image';
 
@@ -38,10 +38,22 @@ interface PostMainProps {
 }
 
 export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
-  const post = getPostContent(`${category}`, slug);
+  const post = getPostContent(category, slug);
   console.log(post);
+	const metaData = post.data;
+	
+	
   return (
     <Box component="article">
+			<PostExcerpt
+        title={metaData.title}
+        description={metaData.description}
+        category={metaData.category}
+        tags={metaData.tags}
+        time={metaData.time}
+        thumbnail={metaData.thumbnail}
+        slug={metaData.slug}
+      />
       <Markdown
         options={{
         overrides: {
