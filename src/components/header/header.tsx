@@ -2,26 +2,20 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import { AppBar, Box, CssBaseline, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import Brand from './brand';
 
 
 const navItems = [
-  {item: 'Home', link: '/'},
-  {item: 'About', link: '/about'},
-  {item: 'Projects', link: '/project'},
-  {item: 'Readings', link: '/readings'}
+  {icon: <HomeIcon />, item: 'Home', link: '/'},
+  {icon: <InfoIcon />, item: 'About', link: '/about'},
+  {icon: <ConstructionIcon />, item: 'Projects', link: '/project'},
+  {icon: <MenuBookIcon />, item: 'Readings', link: '/readings'}
 ];
 
 export const ResponsiveAppBar = () => {
@@ -36,11 +30,12 @@ export const ResponsiveAppBar = () => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', p: 3 }}>
       <Toolbar />
       <List>
-        {navItems.map(({ item, link }) => (
+        {navItems.map(({ icon, item, link }) => (
           <ListItem key={ item } disablePadding>
             <Link href={ link }>
               <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item} />
+                {icon && <Box sx={{ mr: 1 }}>{icon}</Box>}
+                <ListItemText primary={item} sx={{fontSize: "1.2rem", fontWeight: "500" }}/>
               </ListItemButton>
             </Link>
           </ListItem>
