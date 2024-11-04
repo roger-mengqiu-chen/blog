@@ -3,17 +3,17 @@ import { Box } from "@mui/material";
 import { getPostMetadata, getPostContent, BlogPageProps } from "@/utils/post_utils";
 import React from "react";
 import CustomImage from "@/components/home/custom_image";
+import { PostMain } from "@/components/home/home";
 
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata("src/data/blogs");
-  const blogs = posts.filter((post) => post.category === "blog");
-  return blogs.map((post) => ({ slug: post.slug }));
+  const posts = getPostMetadata("src/data/blog");
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-  const post = getPostContent("blogs", slug);
+  const post = getPostContent("blog", slug);
 
   return {
     title: `Roger Chen's Blog ${slug}`,
@@ -23,20 +23,10 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
 
 const BlogPage: React.FC<BlogPageProps> = ({ params }) => {
   const { slug } = params;
-  const post = getPostContent("blogs", slug);
 
   return (
-    <Box component="article">
-      <Markdown
-        options={{
-        overrides: {
-          img: {
-            component: CustomImage,
-          },
-        },
-      }}>{post.content}</Markdown>
-    </Box>
-  );
+    <PostMain slug={slug} category="blog"/>
+  )
 }
 
 export default BlogPage;

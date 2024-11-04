@@ -1,14 +1,16 @@
-import { getPostMetadata, PostMetadata } from '@/utils/post_utils';
-import { Box } from '@mui/material';
+import { BlogPageProps, getPostContent, getPostMetadata, PostMetadata } from '@/utils/post_utils';
+import { Box, Toolbar } from '@mui/material';
 import Post from '@/components/home/post';
+import Markdown from 'markdown-to-jsx';
+import CustomImage from '@/components/home/custom_image';
 
 
 interface Props {
 	category: string;
 }	
 
-const Main: React.FC<Props> = ({ category }) => {
-	const postMetaData = getPostMetadata(`src/data/${category}s`);
+export const Main: React.FC<Props> = ({ category }) => {
+	const postMetaData = getPostMetadata(`src/data/${category}`);
 	
 	return (
 		<Box>
@@ -30,4 +32,24 @@ const Main: React.FC<Props> = ({ category }) => {
 	)
 }
 
-export default Main;
+interface PostMainProps {
+  category: string;
+  slug: string;
+}
+
+export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
+  const post = getPostContent(`${category}`, slug);
+  console.log(post);
+  return (
+    <Box component="article">
+      <Markdown
+        options={{
+        overrides: {
+          img: {
+            component: CustomImage,
+          },
+        },
+      }}>{post.content}</Markdown>
+    </Box>
+  );
+}

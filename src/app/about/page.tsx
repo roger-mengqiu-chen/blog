@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { getPostContent } from "@/utils/post_utils";
 import React from "react";
 import CustomImage from "@/components/home/custom_image";
+import { PostMain } from "@/components/home/home";
 
 
 export const generateStaticParams = async () => {
@@ -17,20 +18,10 @@ export const generateMetadata = async () => {
 }
 
 const AboutPage = () => {
-  const post = getPostContent("about", "about");
-
-  return (
-    <Box component="article">
-      <Markdown
-        options={{
-        overrides: {
-          img: {
-            component: CustomImage,
-          },
-        },
-      }}>{post.content}</Markdown>
-    </Box>
-  );
+	return (
+		<PostMain slug={"about"} category="about"/>
+	)
+	
 }
 
 export default AboutPage;

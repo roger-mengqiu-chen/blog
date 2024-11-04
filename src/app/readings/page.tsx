@@ -17,7 +17,7 @@ export const generateMetadata = async () => {
 }
 
 const ReadingPage = () => {
-  const post = getPostContent("readings", "readings");
+  const post = getPostContent("reading", "readings");
 
   return (
     <Box component="article">

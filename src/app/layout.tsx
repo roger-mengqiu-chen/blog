@@ -25,14 +25,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-      
-      <Header />
-      <Box component="main">
-        <Article>
-          {children}
-        </Article>
-      </Box>
-        
+        <Header />
+        <Box component="main">
+          <Article>
+            {children}
+          </Article>
+        </Box>
         <Footer />
       </body>
     </html>
