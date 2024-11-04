@@ -25,15 +25,13 @@ export default function RootLayout({
       </head>
       <body>
       
-
-        <Header />
-        <Box sx={{ display: 'flex', p: 3 }}>
-          <Box component="main" sx={{ flexGrow: 1 }}>
-            <Article>
-              {children}
-            </Article>
-          </Box>
-        </Box>
+      <Header />
+      <Box component="main">
+        <Article>
+          {children}
+        </Article>
+      </Box>
+        
         <Footer />
       </body>
     </html>

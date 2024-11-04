@@ -6,22 +6,20 @@
 .article code {
   width: auto;
   display: block;
-  white-space: pre-wrap;
-  overflow-x: scroll; /* Add scrollbars if necessary */
+  overflow-x: scroll; 
   border-radius: 10px; 
+}
+
+@media (max-width: 1280px) {
+  .article {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 @media (max-width: 768px) {
   .article {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .article code {
-    width: auto;
-    display: block;
-    white-space: pre-wrap;
-    overflow-x: scroll; /* Add scrollbars if necessary */
-    border-radius: 10px; 
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }

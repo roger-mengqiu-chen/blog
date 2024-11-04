@@ -38,6 +38,7 @@ const Article = ({
 		</Head>
 		<Box className={styles.article}>
 			<Toolbar />
+      <Toolbar />
 			{ children }
 		</Box>
 		</>
