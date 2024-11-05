@@ -39,7 +39,6 @@ interface PostMainProps {
 
 export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
   const post = getPostContent(category, slug);
-  console.log(post);
 	const metaData = post.data;
 	
   return (
