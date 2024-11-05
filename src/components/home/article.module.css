@@ -3,11 +3,19 @@
   margin-right: 20%;
 }
 
-.article code {
+.article pre {
   width: auto;
   display: block;
-  overflow-x: scroll; 
   border-radius: 10px; 
+  max-width: fit-content;
+  margin: auto;
+}
+
+.article code {
+  background-color: black;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 5px;
 }
 
 @media (max-width: 1280px) {
