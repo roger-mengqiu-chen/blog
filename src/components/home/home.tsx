@@ -2,7 +2,7 @@ import {  getPostContent, getPostMetadata, PostMetadata } from '@/utils/post_uti
 import { Box } from '@mui/material';
 import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
-import { CustomImage, CustomLink } from '@/components/home/custom_components';
+import { BlockQuote, CustomImage, CustomLink } from '@/components/home/custom_components';
 
 
 interface Props {
@@ -60,6 +60,9 @@ export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
 						},
 						a: {
 							component: CustomLink,
+						},
+						blockquote: {
+							component: BlockQuote,
 						}
 					},
 				}}>{post.content}</Markdown>

@@ -18,3 +18,9 @@ export const CustomLink = ({ href, children }: { href: string, children: React.R
     <a href={href} className={styles.link}>{children}</a>
   )
 }
+
+export const BlockQuote = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <blockquote className={styles.blockquote}>{children}</blockquote>
+  )
+}
