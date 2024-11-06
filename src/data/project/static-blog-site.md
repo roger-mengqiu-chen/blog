@@ -33,3 +33,7 @@ The GIF below shows the site in action:
 And the site also has mobile version
 
 ![mobile-blog-site](blog-site/mobile-recording.gif)
+
+# More
+
+I probably will add tags function for this site in the future. 
