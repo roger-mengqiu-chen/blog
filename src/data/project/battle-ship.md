@@ -9,9 +9,11 @@ time: "2025-01-01 19:19:00"
 thumbnail: "images/battle-ship/battle-ship.png"
 ---
 
-Github repo [here](https://github.com/roger-mengqiu-chen/BattleShip)
+Github repo is [here](https://github.com/roger-mengqiu-chen/BattleShip)
 
 The project is not packaged yet but you can play it by running the `ServerDriver.java` under server folder and `PlayerDriver.java` under player folder.
+
+Since I didn't spent much time in UI design, this game looks like from stone-age, but it is functional. It allows 2 players to join the game and send text messages to each other. Players can place their ships on the board and start the game. The game will end when one player's ships are all sunk. 
 
 Here is a screenshot of the game:
 
