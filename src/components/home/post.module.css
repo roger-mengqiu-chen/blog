@@ -54,8 +54,8 @@
 }
 
 .thumbnail {
-	height: 150px;
-	width: auto;
+	width: 150px;
+	height: auto;
 }
 
 .tags {
@@ -113,5 +113,22 @@
 
 	.tags {
 		justify-content: end;
+	}
+
+	.thumbnail_container {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		overflow: hidden;
+	}
+
+	.thumbnail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
