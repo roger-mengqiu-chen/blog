@@ -37,10 +37,13 @@ export const getPostMetadata = (fpName: string) => {
 			slug: slug,
 		};
 	});
-	posts.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
 
 	return posts;
 };
+
+export const sortPostsByTime = (posts: PostMetadata[]) => {
+	posts.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
+}
 
 export const getPostContent = (category: string, slug: string) => {
   const file = `src/data/${category}/${slug}.md`;
