@@ -1,4 +1,4 @@
-import {  getPostContent, getPostMetadata, PostMetadata } from '@/utils/post_utils';
+import {  getPostContent, getPostMetadata, PostMetadata, sortPostsByTime } from '@/utils/post_utils';
 import { Box } from '@mui/material';
 import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
@@ -11,7 +11,7 @@ interface Props {
 
 export const Main: React.FC<Props> = ({ category }) => {
 	const postMetaData = getPostMetadata(`src/data/${category}`);
-	
+	sortPostsByTime(postMetaData);
 	return (
 		<Box className="fly">
 			{postMetaData.map((post: PostMetadata) => {
