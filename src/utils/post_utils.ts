@@ -41,6 +41,13 @@ export const getPostMetadata = (fpName: string) => {
 	return posts;
 };
 
+export const getAllPosts = () => {
+	const blogPosts = getPostMetadata("src/data/blog");
+	const projectPosts = getPostMetadata("src/data/project");
+
+	return [...blogPosts, ...projectPosts];
+}
+
 export const sortPostsByTime = (posts: PostMetadata[]) => {
 	posts.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
 }
