@@ -6,6 +6,7 @@ import { AppBar, Box, CssBaseline, Drawer, IconButton, List, ListItem, ListItemB
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import Brand from './brand';
@@ -13,6 +14,7 @@ import Brand from './brand';
 
 const navItems = [
   {icon: <HomeIcon />, item: 'Home', link: '/'},
+  {icon: <LocalOfferIcon />, item: 'Tags', link: '/tag'},
   {icon: <InfoIcon />, item: 'About', link: '/about'},
   {icon: <ConstructionIcon />, item: 'Projects', link: '/project'},
   {icon: <MenuBookIcon />, item: 'Readings', link: '/readings'}
