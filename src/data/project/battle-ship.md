@@ -6,7 +6,7 @@ tags:
     - Java
     - JavaFx
 time: "2025-01-01 19:19:00"
-thumbnail: "images/battle-ship/battle-ship.png"
+thumbnail: "/images/battle-ship/battle-ship.png"
 ---
 
 Github repo is [here](https://github.com/roger-mengqiu-chen/BattleShip)

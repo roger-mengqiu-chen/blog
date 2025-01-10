@@ -1,4 +1,4 @@
-import {  getPostContent, getPostMetadata, PostMetadata, sortPostsByTime } from '@/utils/post_utils';
+import {  getAllPosts, getPostContent, getPostMetadata, PostMetadata, sortPostsByTime } from '@/utils/post_utils';
 import { Box } from '@mui/material';
 import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
@@ -15,6 +15,30 @@ export const Main: React.FC<Props> = ({ category }) => {
 	return (
 		<Box className="fly">
 			{postMetaData.map((post: PostMetadata) => {
+				return (
+					<Post
+						key={post.slug}
+						title={post.title}
+						description={post.description}
+						category={post.category}
+						tags={post.tags}
+						time={post.time}
+						thumbnail={post.thumbnail}
+						slug={post.slug}
+					/>
+				);
+			})}
+		</Box>
+	)
+}
+
+export const TagMain: React.FC<Props> = ({ category }) => {
+	const all_posts = getAllPosts();
+	const posts = all_posts.filter(post => post.tags.includes(category));
+	sortPostsByTime(posts);
+	return (
+		<Box className="fly">
+			{posts.map((post: PostMetadata) => {
 				return (
 					<Post
 						key={post.slug}

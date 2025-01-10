@@ -14,14 +14,13 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
   const post = getPostContent("project", slug);
 
   return {
-    title: `Roger Chen's Blog ${slug}`,
+    title: `Roger Chen's Blog | ${slug}`,
     description: post.data.description,
   }
 }
 
 const ProjectPage: React.FC<BlogPageProps> = ({ params }) => {
   const { slug } = params;
-
   return (
     <PostMain slug={slug} category="project"/>
   )

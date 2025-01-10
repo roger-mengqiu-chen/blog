@@ -2,7 +2,7 @@
 title: "First Blog"
 description: "This is the first blog of this custom built blog app. Blog part will be used to record the events of my life and work. Projects part will be used to record the projects I have done."
 category: "blog"
-thumbnail: "images/first-blog/hello.jpg"
+thumbnail: "/images/first-blog/hello.jpg"
 tags: 
     - Life
 time: "2024-10-26 12:00:00"

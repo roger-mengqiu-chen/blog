@@ -2,7 +2,7 @@
 title: "Stuck on new project"
 description: "Happy new year everyone! It's been a long time since I created my first blog. I feel it's necessary to create a project with C++ to have deeper understanding on how computer works. This will help me to become a better developer and the skills I learned will be useful in future hardware projects."
 category: "blog"
-thumbnail: "images/stuck-on-new-project/stuck-on-new-project.jpg"
+thumbnail: "/images/stuck-on-new-project/stuck-on-new-project.jpg"
 tags: 
     - Life
     - C++

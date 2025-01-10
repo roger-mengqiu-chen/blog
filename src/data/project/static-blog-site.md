@@ -5,7 +5,7 @@ category: "project"
 tags: 
     - NextJS
 time: "2024-11-04 19:19:00"
-thumbnail: "images/blog-site/blog-site-screen-shot.png"
+thumbnail: "/images/blog-site/blog-site-screen-shot.png"
 ---
 
 If you want to skip reading the post, you can check the github repo [here](https://github.com/roger-mengqiu-chen/blog)
