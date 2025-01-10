@@ -1,6 +1,5 @@
 import { getPostMetadata } from "@/utils/post_utils";
 import { Box, Chip } from '@mui/material';
-import styles from '@/components/home/tag_cloud.module.css';
 import Link from "next/link";
 
 
@@ -15,7 +14,7 @@ const TagCloud = () => {
       {uniqueTags.map((tag, index) => {
         return (
           <Link key={index} href={`/tag/${tag}`}>
-            <Chip key={index} className={styles.tag} label={tag} size="medium" clickable/>
+            <Chip key={index} label={tag} size="medium" clickable sx={{margin:"0.5rem", fontSize:"medium"}}/>
           </Link>
         );
       })}
