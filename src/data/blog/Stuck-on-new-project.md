@@ -5,7 +5,7 @@ category: "blog"
 thumbnail: "/images/stuck-on-new-project/stuck-on-new-project.jpg"
 tags: 
     - Life
-    - C++
+    - CPP
 time: "2025-01-05 17:00:00"
 ---
 
