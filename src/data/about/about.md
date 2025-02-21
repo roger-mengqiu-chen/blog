@@ -31,7 +31,7 @@ I have finished several projects during my last a few years, including timesheet
 - Event driven programming
 - Test driven development
 - RESTful API design
-- Database design
+- Database design with MySQL
 - Web development with Django, Flask, Next.js and Spring Boot
 - Git and GitHub
 - Docker
