@@ -8,7 +8,7 @@ export const generateStaticParams = async () => {
 
 export const generateMetadata = async () => {
   return {
-    title: `Roger Chen's Readings`,
+    title: `Roger Chen's Blog | Readings`,
     description: "Books read by Roger Chen",
   }
 }

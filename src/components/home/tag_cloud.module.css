@@ -1,5 +1,6 @@
-.tag {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  font-size: medium;
+.tag_cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
 }

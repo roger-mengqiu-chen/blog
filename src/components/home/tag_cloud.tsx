@@ -1,6 +1,7 @@
 import { getPostMetadata } from "@/utils/post_utils";
 import { Box, Chip } from '@mui/material';
 import Link from "next/link";
+import styles from "./tag_cloud.module.css";
 
 
 const TagCloud = () => {
@@ -10,7 +11,7 @@ const TagCloud = () => {
   const tags = all_posts.map(post => post.tags).flat();
   const uniqueTags = Array.from(new Set(tags));
   return (
-    <Box>
+    <Box className={styles.tag_cloud}>
       {uniqueTags.map((tag, index) => {
         return (
           <Link key={index} href={`/tag/${tag}`}>
