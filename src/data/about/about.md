@@ -20,16 +20,14 @@ I have finished several projects during my last a few years, including timesheet
 
 **2022 Sep - Present: Software Developer, DataDrill Communications, Calgary, Canada**
 
-- Refactored and maintained existing Django applications following clean code and SOLID principles
-- Improved the performance of REST API up to 5 times
-- Implemented Azure AD authentication for Django applications
-- REST API development with Django REST framework and GraphQL
-- Database design and admin with MySQL
-- Data analysis with Pandas and Power BI
-- Frontend development with Next.js, JQuery, Bootstrap and Django templates
-- Event driven programming with MQTT and websockets on Raspberry Pi 
-- CI/CD with GitHub Actions and Docker
-- 
+- Refactored and maintained existing Python Django applications following clean code and SOLID principles
+- Improved the performance of several existing REST APIs up to 5 times
+- Speeded up loading time up to 10 times for a Django admin section with over 4 million records
+- Designed and implemented an event driven system with MQTT to control the RF sensors, motor and GPIOs on Linux OS.
+- Simplified a web server application with Flask and reduced the startup time from 30 seconds to 2 seconds
+- Developed inventory report applications with Nextjs, Pandas and Power BI, which does data analysis for the company to forecast the product demand
+- Database design and administration with MySQL
+- Deployed applications with Microsoft Azure Cloud App services, Windows IIS and Docker containers
 
 **2022 Jul - Sep: Volunteer Backend Developer, 65SQuare, remote** 
 
