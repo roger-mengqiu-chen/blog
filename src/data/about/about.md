@@ -49,6 +49,10 @@ I have finished several projects during my last a few years, including timesheet
 - Linux, Windows and MacOS
 - Agile methodology
 
+## Rewards
+
+- 2021: Json Lang Scholarship, Southern Alberta Institution of Technology
+
 ## Education
 
 **2020 - 2022: Diploma of Information Technology**, Southern Alberta Institution of Technology
