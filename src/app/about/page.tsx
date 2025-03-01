@@ -37,15 +37,12 @@ const AboutPage = () => {
               
               <b>2022 Sep - Present: Software Developer, DataDrill Communications, Calgary, Canada</b>
               <ul className={styles.ul}>
-                  <li className={styles.li}>
-                    Refactored and maintained existing Python Django applications following clean code and SOLID principles
-                  </li>
                 <li className={styles.li}>Improved the performance of several existing REST APIs up to 5 times</li>
-                
                 <li className={styles.li}>Speeded up loading time up to 10 times for a Django admin section with over 4 million records</li>
                 <li className={styles.li}>Designed and implemented an event driven system with MQTT to control the RF sensors, motor and GPIOs on Linux OS.</li>
                 <li className={styles.li}>Simplified a web server application with Flask and reduced the startup time from 30 seconds to 2 seconds</li>
                 <li className={styles.li}>Developed inventory report applications with Nextjs, Pandas and Power BI, which does data analysis for the company to forecast the product demand</li>
+                <li className={styles.li}>Refactored and maintained existing Python Django applications following clean code and SOLID principles</li>
                 <li className={styles.li}>Database design and administration with MySQL</li>
                 <li className={styles.li}>Deployed applications with Microsoft Azure Cloud App services, Windows IIS and Docker containers</li>
               </ul>
