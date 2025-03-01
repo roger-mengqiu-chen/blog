@@ -12,11 +12,10 @@
 }
 
 .article code {
-  background-color: black;
-  font-size: small;
+  background-color: #333;
   font-family: 'Courier New', Courier, monospace;
   color: white;
-  padding: 0.2rem;
+  padding: 0.1rem;
   border-radius: 5px;
 }
 
