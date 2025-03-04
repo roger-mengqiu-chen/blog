@@ -19,16 +19,6 @@ const AboutPage = () => {
 	return (
     <>
       <h1 className={styles.title}>About Me</h1>
-      <Paper elevation={3} className={styles.card}>
-        <p>Hi, my name is Roger Chen, a software developer currently working in DataDrill Communications in Calgary, Canada.</p>
-
-        <p>I have Bachelor of Science degree from University of British Columbia and Diploma of Information Technology from Southern Alberta Institution of Technology. After working in several industries, I finally decide to live as a software developer. During after-work time, I like playing computer games and hiking.</p>
-
-        <p>Currently, my primary programming language is Python. I also can code with Java, JavaScript, SQL and C++.</p>
-
-        <p>I have finished several projects during my last a few years, including timesheets, inventory management report and of course this site! I also worked with a project that is deployed on Raspberry Pi and has interactions with different RF sensors and components. Although the most projects I had touched with are web based, I am trying to spend more time in working with hardware. You will see more projects and posts here in the future.</p>
-
-      </Paper>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={1}>
           <Grid size={{ xs: 12, md: 8 }} >
