@@ -46,7 +46,7 @@ const AboutPage = () => {
               
               <Divider><h2>Rewards</h2></Divider>
               <ul className={styles.ul}>
-                <li className={styles.li}>2021: Json Lang Scholarship, Southern Alberta Institution of Technology</li>
+                <li className={styles.li}>2021: Jason Lang Scholarship, Southern Alberta Institution of Technology</li>
               </ul>
             </Paper>
           </Grid>
