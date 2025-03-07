@@ -3,22 +3,13 @@ import styles from "./about.module.css";
 import { Box, Paper } from "@mui/material";
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid2';
-
-export const generateStaticParams = async () => {
-	return [{slug: "about"}]
-}
-
-export const generateMetadata = async () => {
-  return {
-    title: `Roger Chen's Site`,
-    description: "Roger Chen's Site",
-  }
-}
+import { ProjectFlow } from "@/components/home/home";
 
 
 const Home = () => {
   return (
     <>
+      <ProjectFlow />
       <h1 className={styles.title}>About Me</h1>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={1}>

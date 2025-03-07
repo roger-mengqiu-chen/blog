@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
 import { BlockQuote, CustomImage, CustomLink } from '@/components/home/custom_components';
+import CoverFlow from './cover_flow';
 
 
 interface Props {
@@ -29,6 +30,15 @@ export const Main: React.FC<Props> = ({ category }) => {
 				);
 			})}
 		</Box>
+	)
+}
+
+export const ProjectFlow = () => {
+	const postMetaData = getPostMetadata(`src/data/project`);
+	sortPostsByTime(postMetaData);
+
+	return (
+		<CoverFlow projects={postMetaData} />
 	)
 }
 
