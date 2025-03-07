@@ -5,9 +5,7 @@ import styles from "./tag_cloud.module.css";
 
 
 const TagCloud = () => {
-  const blog_posts = getPostMetadata("src/data/blog");
-  const project_posts = getPostMetadata("src/data/project");
-  const all_posts = blog_posts.concat(project_posts);
+  const all_posts = getPostMetadata("src/data/project");
   const tags = all_posts.map(post => post.tags).flat();
   const uniqueTags = Array.from(new Set(tags));
   return (
