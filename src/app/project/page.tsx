@@ -3,8 +3,8 @@ import { Main } from '@/components/home/home';
 
 export const generateMetadata = async () => {
   return {
-    title: `Roger Chen's Blog | Projects`,
-    description: "Blog from Roger Chen",
+    title: `Roger Chen's Site | Projects`,
+    description: "Roger Chen's projects",
   }
 }
 

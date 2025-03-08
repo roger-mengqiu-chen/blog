@@ -8,8 +8,8 @@ import "./global.css"
 
 
 export const metadata: Metadata = {
-  title: "Roger Chen's Blog",
-  description: "A blog from a software developer",
+  title: "Roger Chen's Site",
+  description: "A site from a software developer",
 };
 
 export default function RootLayout({

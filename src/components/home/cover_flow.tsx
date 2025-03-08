@@ -7,35 +7,6 @@ import { PostMetadata } from "@/utils/post_utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-const variants = {
-  enter: (direction: number) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1
-  },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    };
-  }
-};
-
-
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
-  return Math.abs(offset) * velocity;
-};
-
-
-
 export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -68,7 +39,6 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
             index === currentIndex && (
               <motion.div
                 key={project.title}
-                variants={variants}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}

@@ -19,7 +19,7 @@ export const generateMetadata = async ({ params }: TagPageProps) => {
   const { slug } = params;
   console.log(`Generating metadata for tag page ${slug}`);
   return {
-    title: `Roger Chen's Blog | ${slug}`
+    title: `Roger Chen's Site | ${slug}`
   }
 }
 

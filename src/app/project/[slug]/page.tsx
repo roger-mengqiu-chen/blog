@@ -14,7 +14,7 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
   const post = getPostContent("project", slug);
 
   return {
-    title: `Roger Chen's Blog | ${slug}`,
+    title: `Roger Chen's Project | ${slug}`,
     description: post.data.description,
   }
 }
