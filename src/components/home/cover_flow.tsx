@@ -1,71 +1,109 @@
 'use client';
 
 import { useState } from "react";
-import { Box, Card, CardContent, IconButton } from "@mui/material";
+import { Box, IconButton, Paper } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { PostMetadata } from "@/utils/post_utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { wrap } from "popmotion";
+import styles from './cover_flow.module.css';
+
+
+const variants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 500 : -500, // Reduce the distance to prevent "jumping"
+    opacity: 0,
+    scale: 0.95, // Slight scale for depth effect
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      x: { type: "spring", stiffness: 200, damping: 25 },
+      opacity: { duration: 0.4 },
+    },
+  },
+  exit: (direction: number) => ({
+    x: direction < 0 ? 500 : -500, // Exit smoothly in the correct direction
+    opacity: 0,
+    scale: 0.95,
+  }),
+};
+
+
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
+
 
 
 export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  const projectIndex = wrap(0, projects.length, page);
+
+  const paginate = (newDirection: number) => {
+    setPage([page + newDirection, newDirection]);
+  };
 
   const handleNext = () => {
-    const newIndex = currentIndex + 1;
-    setCurrentIndex(newIndex % projects.length);
+    paginate(1);
   };
 
   const handlePrev = () => {
-    const newIndex = currentIndex -1;
-    setCurrentIndex(newIndex % projects.length);
+    paginate(-1);
   };
 
   return (
-    <Box className="min-h-screen bg-gray-900 text-white px-6 py-12 text-center">
-      {/* Hero Section */}
-      <h1 className="text-4xl font-bold">Roger Chen</h1>
-      <p className="text-lg mt-2">Software Developer</p>
-      <p className="mt-4 text-gray-400">
-        Crafting scalable solutions with Python, Java, JavaScript, and modern frameworks.
-      </p>
-      
-      {/* Projects Cover Flow */}
-      <Box className="relative flex items-center justify-center mt-12">
-        <IconButton onClick={handlePrev} className="absolute left-0 text-white">
-          <ArrowBack fontSize="large" />
-        </IconButton>
-        <AnimatePresence initial={false}>
-        {projects.map((project, index) => (
-            index === currentIndex && (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                // transition={{
-                //   x: { type: "spring", stiffness: 300, damping: 30 },
-                //   opacity: { duration: 0.2 }
-                // }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-              >
-                <Box className="w-80 flex justify-center">
-                  <Card className="w-80 bg-gray-800 shadow-lg">
-                    <CardContent>
-                      <h3 className="text-xl font-semibold">{project.title}</h3>
-                      <p className="text-gray-400">Description of {project.title}...</p>
-                    </CardContent>
-                  </Card>
-                </Box>
-              </motion.div>
-            )
-          ))}
-        </AnimatePresence>
-        <IconButton onClick={handleNext} className="absolute right-0 text-white">
-          <ArrowForward fontSize="large" />
-        </IconButton>
-      </Box>
+    <Box className={styles.flow_container}>
+      <AnimatePresence mode="popLayout" custom={direction}>
+        <motion.div
+          key={page}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 200, damping: 25 },
+            opacity: { duration: 0.5 }
+          }}
+          layout
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.4}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1);
+            }
+          }}
+        >
+          <Paper className={styles.coverflow}>
+            <Box className={styles.arrow}>
+              <IconButton onClick={handlePrev} className="text-white">
+                <ArrowBack fontSize="large" />
+              </IconButton>
+            </Box>
+            <Box className={styles.display}>
+              
+                <h3 className="text-xl font-semibold">{projects[projectIndex].title}</h3>
+                <p className="text-gray-400">Description of {projects[projectIndex].title}...</p>
+
+            </Box>
+            <Box className={styles.arrow}>
+              <IconButton onClick={handleNext} className="text-white">
+                <ArrowForward fontSize="large" />
+              </IconButton>
+            </Box>
+          </Paper>
+        </motion.div>
+      </AnimatePresence>
     </Box>
   )
 }

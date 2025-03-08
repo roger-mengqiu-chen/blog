@@ -1,0 +1,33 @@
+.flow_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Fixed absolute positioning issue */
+  width: 100%; /* Changed from 100vw to ensure it fits parent */
+  overflow: hidden; /* Prevents overflowing content */
+}
+
+.coverflow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90vw; /* Prevents going beyond viewport */
+  padding: 20px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  z-index: 2; /* Ensures arrows stay clickable */
+}
+
+.display {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  max-width: 70vw; /* Prevents content from overflowing */
+
+}
