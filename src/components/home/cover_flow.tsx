@@ -61,7 +61,7 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
     <Box className={styles.flow_container}>
       <Box className={styles.arrow}>
         <IconButton onClick={handlePrev} className="text-white">
-          <ArrowBack fontSize="large" />
+          <ArrowBack fontSize="medium" />
         </IconButton>
       </Box>
       <AnimatePresence mode="popLayout" custom={direction}>
@@ -99,7 +99,7 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
       </AnimatePresence>
       <Box className={styles.arrow}>
         <IconButton onClick={handleNext} className="text-white">
-          <ArrowForward fontSize="large" />
+          <ArrowForward fontSize="medium" />
         </IconButton>
       </Box>
     </Box>

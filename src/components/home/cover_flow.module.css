@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 90vw;
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
 }
 
@@ -29,7 +29,7 @@
   flex: 1;
   text-align: center;
   padding: 20px;
-  min-width: 60vw; 
-  max-width: 70vw; 
+  min-width: 45vw; 
+  max-width: 45vw; 
 
 }

@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <>
       <ProjectFlow />
-      <Toolbar />
       <h1 className={styles.title}>About Me</h1>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={1}>
