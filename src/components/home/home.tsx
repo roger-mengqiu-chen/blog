@@ -12,7 +12,8 @@ interface Props {
 
 export const Main: React.FC<Props> = ({ category }) => {
 	const postMetaData = getPostMetadata(`src/data/${category}`);
-	sortPostsByTime(postMetaData);
+	const lastFive = postMetaData.slice(0, 5);
+	sortPostsByTime(lastFive);
 	return (
 		<Box className="fly">
 			{postMetaData.map((post: PostMetadata) => {
