@@ -1,4 +1,4 @@
-import { Box, Paper } from "@mui/material";
+import { Box } from "@mui/material";
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import Link from "next/link";
 import Image from "next/image";
