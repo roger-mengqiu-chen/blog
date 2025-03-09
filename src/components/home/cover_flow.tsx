@@ -11,9 +11,9 @@ import styles from './cover_flow.module.css';
 
 const variants = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 500 : -500, // Reduce the distance to prevent "jumping"
+    x: direction > 0 ? 500 : -500,
     opacity: 0,
-    scale: 0.95, // Slight scale for depth effect
+    scale: 0.95,
   }),
   center: {
     zIndex: 1,
@@ -26,7 +26,7 @@ const variants = {
     },
   },
   exit: (direction: number) => ({
-    x: direction < 0 ? 500 : -500, // Exit smoothly in the correct direction
+    x: direction < 0 ? 500 : -500,
     opacity: 0,
     scale: 0.95,
   }),
@@ -59,6 +59,11 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
 
   return (
     <Box className={styles.flow_container}>
+      <Box className={styles.arrow}>
+        <IconButton onClick={handlePrev} className="text-white">
+          <ArrowBack fontSize="large" />
+        </IconButton>
+      </Box>
       <AnimatePresence mode="popLayout" custom={direction}>
         <motion.div
           key={page}
@@ -84,26 +89,19 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
             }
           }}
         >
-          <Paper className={styles.coverflow}>
-            <Box className={styles.arrow}>
-              <IconButton onClick={handlePrev} className="text-white">
-                <ArrowBack fontSize="large" />
-              </IconButton>
-            </Box>
+          <Paper elevation={4} className={styles.coverflow}>
             <Box className={styles.display}>
-              
-                <h3 className="text-xl font-semibold">{projects[projectIndex].title}</h3>
-                <p className="text-gray-400">Description of {projects[projectIndex].title}...</p>
-
-            </Box>
-            <Box className={styles.arrow}>
-              <IconButton onClick={handleNext} className="text-white">
-                <ArrowForward fontSize="large" />
-              </IconButton>
+              <h3 className="text-xl font-semibold">{projects[projectIndex].title}</h3>
+              <p className="text-gray-400">Description of {projects[projectIndex].title}...</p>
             </Box>
           </Paper>
         </motion.div>
       </AnimatePresence>
+      <Box className={styles.arrow}>
+        <IconButton onClick={handleNext} className="text-white">
+          <ArrowForward fontSize="large" />
+        </IconButton>
+      </Box>
     </Box>
   )
 }

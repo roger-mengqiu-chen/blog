@@ -2,17 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Fixed absolute positioning issue */
-  width: 100%; /* Changed from 100vw to ensure it fits parent */
-  overflow: hidden; /* Prevents overflowing content */
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .coverflow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 90vw; /* Prevents going beyond viewport */
+  max-width: 90vw;
   padding: 20px;
+  margin: 10px;
 }
 
 .arrow {
@@ -21,13 +22,14 @@
   align-items: center;
   user-select: none;
   cursor: pointer;
-  z-index: 2; /* Ensures arrows stay clickable */
+  z-index: 2; 
 }
 
 .display {
   flex: 1;
   text-align: center;
   padding: 20px;
-  max-width: 70vw; /* Prevents content from overflowing */
+  min-width: 60vw; 
+  max-width: 70vw; 
 
 }
