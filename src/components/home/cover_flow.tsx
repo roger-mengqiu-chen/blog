@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Box, IconButton } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { PostMetadata } from "@/utils/post_utils";
@@ -46,25 +46,25 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
 
   const projectIndex = wrap(0, projects.length, page);
 
-  const paginate = (newDirection: number) => {
+  const paginate = useCallback((newDirection: number) => {
     setPage([page + newDirection, newDirection]);
-  };
+  }, [page]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     paginate(1);
-  };
+  }, [paginate]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     paginate(-1);
-  };
+  }, [paginate]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 4500);
+    }, 3500);
 
     return () => clearInterval(interval);
-  }, [page]);
+  }, [handleNext, page]);
 
   return (
     <Box className={styles.flow_container}>

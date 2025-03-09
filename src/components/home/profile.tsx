@@ -21,7 +21,7 @@ export const Profile = () => {
         
       </Box>
       <Box className={styles.profile_description}>
-      <h1 className={styles.profile_title}>I'm A Software Developer</h1>
+      <h1 className={styles.profile_title}>I&apos;m A Software Developer</h1>
         <Box className={styles.profile_brief}>
           With experience in full stack development on multiple platforms, I
           provide simple and effective solutions to existing problems
