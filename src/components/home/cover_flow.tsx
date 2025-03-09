@@ -7,6 +7,7 @@ import { PostMetadata } from "@/utils/post_utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import styles from './cover_flow.module.css';
+import { Post } from "./post";
 
 
 const variants = {
@@ -89,12 +90,16 @@ export default function CoverFlow({ projects } : {projects: PostMetadata[]}) {
             }
           }}
         >
-          <Paper elevation={4} className={styles.coverflow}>
-            <Box className={styles.display}>
-              <h3 className="text-xl font-semibold">{projects[projectIndex].title}</h3>
-              <p className="text-gray-400">Description of {projects[projectIndex].title}...</p>
-            </Box>
-          </Paper>
+          <Post
+            title={projects[projectIndex].title}
+            description={projects[projectIndex].description}
+            category={projects[projectIndex].category}
+            tags={projects[projectIndex].tags}
+            time={projects[projectIndex].time}
+            thumbnail={projects[projectIndex].thumbnail}
+            slug={projects[projectIndex].slug} 
+          />
+
         </motion.div>
       </AnimatePresence>
       <Box className={styles.arrow}>

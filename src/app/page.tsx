@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./about.module.css";
-import { Box, Paper, Toolbar } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid2';
 import { ProjectFlow } from "@/components/home/home";
+import { Profile } from "@/components/home/profile";
 
 
 const Home = () => {
   return (
     <>
+      <Profile />
       <ProjectFlow />
-      <h1 className={styles.title}>About Me</h1>
+      
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={1}>
           <Grid size={{ xs: 12, md: 8 }} >
