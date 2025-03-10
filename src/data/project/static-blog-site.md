@@ -4,6 +4,7 @@ description: "This post is about how I built this static blog site. Building a s
 category: "project"
 tags: 
     - NextJS
+    - MUI
 time: "2024-11-04 19:19:00"
 thumbnail: "/images/blog-site/blog-site-screen-shot.png"
 ---

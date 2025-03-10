@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.profile_brief {
+  font-size: larger;
+}
+
 .profile_social {
   display: flex;
   justify-content: center;

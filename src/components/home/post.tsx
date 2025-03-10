@@ -23,7 +23,7 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 					<Box className={styles.card_brief}>
 						<Box className={styles.title}>{post.title}</Box>
 						<Box className={styles.time}>{post.time}</Box>
-						<Box>{post.description}</Box>
+						<Box className={styles.description}>{post.description}</Box>
 						<Stack className={styles.tags} direction="row">
 							{post.tags.map((tag: string) => {
 								return (

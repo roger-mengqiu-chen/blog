@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from "react";
-import { Box, IconButton } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { PostMetadata } from "@/utils/post_utils";
 import { motion, AnimatePresence } from "framer-motion";
