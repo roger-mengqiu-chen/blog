@@ -62,9 +62,10 @@
 .tags {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: end;
+	justify-content: center;
 	align-items: flex-end;
 	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .tag {
@@ -120,7 +121,7 @@
 	}
 
 	.tags {
-		justify-content: end;
+		justify-content: center;
 	}
 
 	.description {
