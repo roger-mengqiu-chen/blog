@@ -25,6 +25,7 @@ const Home = () => {
                 <li className={styles.li}>Designed and implemented an event driven system with MQTT to control the RF sensors, motor and GPIOs on Linux OS.</li>
                 <li className={styles.li}>Simplified a web server application with Flask and sped up the startup process over 10 times.</li>
                 <li className={styles.li}>Developed inventory report applications with Nextjs, Pandas and Power BI, which does data analysis for the company to forecast the product demand</li>
+                <li className={styles.li}>Implemented a service interacting with MongoDB</li>
                 <li className={styles.li}>Refactored and maintained existing Python Django applications following clean code and SOLID principles</li>
                 <li className={styles.li}>Database design and administration with MySQL</li>
                 <li className={styles.li}>Deployed applications with Microsoft Azure Cloud App services, Windows IIS and Docker containers</li>

@@ -20,6 +20,7 @@ The site should be easy to be maintained and updated, so I decided to use NextJS
 - Build the site to be static file and deploy it to Firebase
 - Syntax highlighting for code blocks
 - Add Google Analytics to the site
+- Use motion.js for animations
 
 Since this site is just for demonstrating my life and projects, I won't spend much time adding more fancy features such as dark mode, comment section, etc. Please feel free to reach out to me through Linkedin. I am always happy to chat with you.
 
