@@ -23,7 +23,7 @@ const Home = () => {
                 <li className={styles.li}>Improved the performance of several existing REST APIs up to 5 times</li>
                 <li className={styles.li}>Speeded up loading time up to 10 times for a Django admin section with over 4 million records</li>
                 <li className={styles.li}>Designed and implemented an event driven system with MQTT to control the RF sensors, motor and GPIOs on Linux OS.</li>
-                <li className={styles.li}>Simplified a web server application with Flask and reduced the startup time from 30 seconds to 2 seconds</li>
+                <li className={styles.li}>Simplified a web server application with Flask and sped up the startup process over 10 times.</li>
                 <li className={styles.li}>Developed inventory report applications with Nextjs, Pandas and Power BI, which does data analysis for the company to forecast the product demand</li>
                 <li className={styles.li}>Refactored and maintained existing Python Django applications following clean code and SOLID principles</li>
                 <li className={styles.li}>Database design and administration with MySQL</li>
@@ -53,10 +53,10 @@ const Home = () => {
                 <li className={styles.li}>RESTful API design</li>
                 <li className={styles.li}>Azure governance and security</li>
                 <li className={styles.li}>Data analysis with Pandas and Power BI</li>
-                <li className={styles.li}>Database design with MySQL</li>
+                <li className={styles.li}>MySQL/PostgreSQL</li>
                 <li className={styles.li}>Web development with Django, Flask, Next.js and Spring Boot</li>
                 <li className={styles.li}>Git and GitHub</li>
-                <li className={styles.li}>Docker</li>
+                <li className={styles.li}>Docker/Podman</li>
                 <li className={styles.li}>Linux, Windows and MacOS</li>
                 <li className={styles.li}>Agile methodology</li>
               </ul>
@@ -65,7 +65,6 @@ const Home = () => {
               <ul className={styles.ul}>
                 <li className={styles.li}><b>2020 - 2022: Diploma of Information Technology</b>, Southern Alberta Institution of Technology</li>
                 <li className={styles.li}><b>2012 - 2015: Bachelor of Science</b>, University of British Columbia</li>
-                
               </ul>
             </Paper>
           </Grid>
