@@ -51,11 +51,11 @@ const Home = () => {
               <ul className={styles.ul}>
                 <li className={styles.li}>Event driven programming</li>
                 <li className={styles.li}>Test driven development</li>
-                <li className={styles.li}>RESTful API design</li>
+                <li className={styles.li}>RESTful API / GraphQL</li>
                 <li className={styles.li}>Azure governance and security</li>
                 <li className={styles.li}>Data analysis with Pandas and Power BI</li>
                 <li className={styles.li}>MySQL/PostgreSQL</li>
-                <li className={styles.li}>Web development with Django, Flask, Next.js and Spring Boot</li>
+                <li className={styles.li}>Web development with Django, Flask, FastAPI, Next.js/React.js and Spring Boot</li>
                 <li className={styles.li}>Git and GitHub</li>
                 <li className={styles.li}>Docker/Podman</li>
                 <li className={styles.li}>Linux, Windows and MacOS</li>
