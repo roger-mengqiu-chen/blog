@@ -31,7 +31,7 @@ const Home = () => {
                 <li className={styles.li}>Deployed applications with Microsoft Azure Cloud App services, Windows IIS and Docker containers/podman</li>
               </ul>
 
-              <b>2022 Jul - Sep: Volunteer Backend Developer, 65SQuare, remote</b>
+              <b>2022 Jul - Sep: Volunteer Backend Developer, 65Square, remote</b>
               <ul className={styles.ul}>
                 <li className={styles.li}>Reviewed the design documents and provided feedback</li>
                 <li className={styles.li}>Tested usability of existing APIs and applications</li>
