@@ -1,0 +1,34 @@
+.flow_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.coverflow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90vw;
+  padding: 10px;
+  margin: 10px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  z-index: 2; 
+}
+
+.display {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  min-width: 50vw; 
+  max-width: 50vw; 
+}

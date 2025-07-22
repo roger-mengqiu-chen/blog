@@ -51,17 +51,21 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	height: 250px;
 }
 
 .thumbnail {
-	width: 150px;
-	height: auto;
+	width: 400px;
+	height: min-content;
 }
 
 .tags {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
 	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .tag {
@@ -95,6 +99,11 @@
 	flex-wrap: wrap;
 }
 
+.description {
+	display: flex;
+	align-items: center;
+}
+
 @media (max-width: 768px) {
 	.card {
 		padding: 0.5rem;
@@ -107,19 +116,25 @@
 	}
 
 	.card_brief {
-		padding-left: 0.2rem;
+		padding-left: 0.1rem;
 		padding-right: 0.2rem;
 	}
 
 	.tags {
-		justify-content: end;
+		justify-content: center;
+	}
+
+	.description {
+		height: 200px;
+		display: flex;
+		align-items: center;
 	}
 
 	.thumbnail_container {
 		position: relative;
 		width: 100%;
 		height: 0;
-		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		padding-bottom: 56.25%; 
 		overflow: hidden;
 	}
 

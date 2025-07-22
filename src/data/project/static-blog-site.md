@@ -4,6 +4,7 @@ description: "This post is about how I built this static blog site. Building a s
 category: "project"
 tags: 
     - NextJS
+    - MUI
 time: "2024-11-04 19:19:00"
 thumbnail: "/images/blog-site/blog-site-screen-shot.png"
 ---
@@ -19,6 +20,7 @@ The site should be easy to be maintained and updated, so I decided to use NextJS
 - Build the site to be static file and deploy it to Firebase
 - Syntax highlighting for code blocks
 - Add Google Analytics to the site
+- Use motion.js for animations
 
 Since this site is just for demonstrating my life and projects, I won't spend much time adding more fancy features such as dark mode, comment section, etc. Please feel free to reach out to me through Linkedin. I am always happy to chat with you.
 

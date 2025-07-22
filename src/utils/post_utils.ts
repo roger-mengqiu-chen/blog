@@ -42,10 +42,9 @@ export const getPostMetadata = (fpName: string) => {
 };
 
 export const getAllPosts = () => {
-	const blogPosts = getPostMetadata("src/data/blog");
 	const projectPosts = getPostMetadata("src/data/project");
 
-	return [...blogPosts, ...projectPosts];
+	return [...projectPosts];
 }
 
 export const sortPostsByTime = (posts: PostMetadata[]) => {
