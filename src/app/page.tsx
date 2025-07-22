@@ -22,13 +22,13 @@ const Home = () => {
               <ul className={styles.ul}>
                 <li className={styles.li}>Improved the performance of several existing REST APIs up to 5 times</li>
                 <li className={styles.li}>Speeded up loading time up to 10 times for a Django admin section with over 4 million records</li>
-                <li className={styles.li}>Designed and implemented an event driven system with MQTT to control the RF sensors, motor and GPIOs on Linux OS.</li>
+                <li className={styles.li}>Designed and implemented an event driven system with MQTT to control the RF sensors, motor and GPIOs on Raspberry Pi.</li>
+                <li className={styles.li}>Created an embedded program on ESP32 to control a rotator.</li>
                 <li className={styles.li}>Simplified a web server application with Flask and sped up the startup process over 10 times.</li>
-                <li className={styles.li}>Developed inventory report applications with Nextjs, Pandas and Power BI, which does data analysis for the company to forecast the product demand</li>
-                <li className={styles.li}>Implemented a service interacting with MongoDB</li>
+                <li className={styles.li}>Developed inventory report applications with MongoDB, Nextjs, Pandas and Power BI to forecast the product demand for the company</li>
                 <li className={styles.li}>Refactored and maintained existing Python Django applications following clean code and SOLID principles</li>
-                <li className={styles.li}>Database design and administration with MySQL</li>
-                <li className={styles.li}>Deployed applications with Microsoft Azure Cloud App services, Windows IIS and Docker containers</li>
+                <li className={styles.li}>Database design and administration with MySQL/SQL Server</li>
+                <li className={styles.li}>Deployed applications with Microsoft Azure Cloud App services, Windows IIS and Docker containers/podman</li>
               </ul>
 
               <b>2022 Jul - Sep: Volunteer Backend Developer, 65SQuare, remote</b>
