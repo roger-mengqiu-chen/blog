@@ -66,6 +66,7 @@ const Home = () => {
               <ul className={styles.ul}>
                 <li className={styles.li}><b>2020 - 2022: Diploma of Information Technology</b>, Southern Alberta Institution of Technology</li>
                 <li className={styles.li}><b>2012 - 2015: Bachelor of Science</b>, University of British Columbia</li>
+                <li className={styles.li}><b>2012 - 2015: Bachelor of Forestry</b>, Nanjing Forestry University</li>
               </ul>
             </Paper>
           </Grid>
