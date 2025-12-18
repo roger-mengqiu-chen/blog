@@ -13,3 +13,4 @@ time: "2024-10-26 12:00:00"
 | **C Primer Plus, Sixth Edition** | _Stephen Prata_ |
 | **C++ Primer Plus, Fifth Edition** | _Stephen Prata_ |
 | **The Innovators’ Mindset: Empower Learning, Unleash Talent, and Lead a Culture of Creativity** | _George Couros_ |
+| **Sapiens: A Brief History of Humankind** | _Yuval Noah Harari_ |
