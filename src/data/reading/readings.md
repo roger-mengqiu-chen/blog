@@ -15,3 +15,5 @@ time: "2025-12-17"
 | **The Innovators’ Mindset: Empower Learning, Unleash Talent, and Lead a Culture of Creativity** | _George Couros_ |
 | **Sapiens: A Brief History of Humankind** | _Yuval Noah Harari_ |
 | **Go Suck a Lemon: Strategies for Improving Your emotional Intelligence** | _Michael Cornwall_ |
+| **Flutter design patterns and best practices** | _Daria Orlova, Esra Kadah, Jaime Blasco, Mike Taylor_ |
+
