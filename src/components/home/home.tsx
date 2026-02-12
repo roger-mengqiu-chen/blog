@@ -1,4 +1,4 @@
-import {  getAllPosts, getPostContent, getPostMetadata, PostMetadata, sortPostsByTime } from '@/utils/post_utils';
+import { getAllPosts, getPostContent, getPostMetadata, PostMetadata, sortPostsByTime } from '@/utils/post_utils';
 import { Box } from '@mui/material';
 import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
@@ -8,7 +8,7 @@ import CoverFlow from './cover_flow';
 
 interface Props {
 	category: string;
-}	
+}
 
 export const Main: React.FC<Props> = ({ category }) => {
 	const postMetaData = getPostMetadata(`src/data/${category}`);
@@ -68,27 +68,27 @@ export const TagMain: React.FC<Props> = ({ category }) => {
 }
 
 interface PostMainProps {
-  category: string;
-  slug: string;
+	category: string;
+	slug: string;
 }
 
 export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
-  const post = getPostContent(category, slug);
+	const post = getPostContent(category, slug);
 	const metaData = post.data;
-	
-  return (
-    <Box component="article" className="fly">
+
+	return (
+		<Box component="article" className="fly">
 			<PostExcerpt
-        title={metaData.title}
-        description={metaData.description}
-        category={metaData.category}
-        tags={metaData.tags}
-        time={metaData.time}
-        thumbnail={metaData.thumbnail}
-        slug={metaData.slug}
-      />
-      <Markdown
-        options={{
+				title={metaData.title}
+				description={metaData.description}
+				category={metaData.category}
+				tags={metaData.tags}
+				time={metaData.time}
+				thumbnail={metaData.thumbnail}
+				slug={metaData.slug}
+			/>
+			<Markdown
+				options={{
 					overrides: {
 						img: {
 							component: CustomImage,
@@ -100,7 +100,8 @@ export const PostMain: React.FC<PostMainProps> = ({ category, slug }) => {
 							component: BlockQuote,
 						}
 					},
-				}}>{post.content}</Markdown>
-    </Box>
-  );
+				}}>{post.content}
+			</Markdown>
+		</Box>
+	);
 }
