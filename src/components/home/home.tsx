@@ -4,8 +4,6 @@ import { Post, PostExcerpt } from '@/components/home/post';
 import Markdown from 'markdown-to-jsx';
 import { BlockQuote, CustomImage, CustomLink } from '@/components/home/custom_components';
 import CoverFlow from './cover_flow';
-import {notFound} from "next/navigation";
-
 
 interface Props {
 	category: string;
