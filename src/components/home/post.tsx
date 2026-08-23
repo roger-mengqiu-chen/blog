@@ -3,14 +3,16 @@ import { PostMetadata } from "@/utils/post_utils";
 import React from "react";
 import styles from '@/components/home/post.module.css';
 import Image from 'next/image';
+import {normalizePublicAsset} from "@/utils/path_utils";
 
 export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 	const defaultThumbnail = "/images/default-thumbnail.jpg";	
 	const category = post.category;
+	const href = normalizePublicAsset(`${category}/${post.slug}`);
 	
 	return (
 		<Paper elevation={3} className={styles.card}>
-			<Link href={`/${category}/${post.slug}`} className={styles.post_link} underline="none">
+			<Link href={href} className={styles.post_link} underline="none">
 				<Box className={styles.card_content}>
 					<Box className={styles.thumbnail_container}>
 						<Image src={post.thumbnail ? post.thumbnail : defaultThumbnail} 
