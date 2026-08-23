@@ -6,7 +6,9 @@ import Image from 'next/image';
 import {normalizePublicAsset} from "@/utils/path_utils";
 
 export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
-	const defaultThumbnail = "/images/default-thumbnail.jpg";	
+	const defaultThumbnail = "/images/default-thumbnail.jpg";
+	const thumbnail = post.thumbnail ? post.thumbnail : defaultThumbnail;
+	const thumbnailSrc = normalizePublicAsset(thumbnail);
 	const category = post.category;
 	const href = normalizePublicAsset(`${category}/${post.slug}`);
 	
@@ -15,7 +17,7 @@ export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
 			<Link href={href} className={styles.post_link} underline="none">
 				<Box className={styles.card_content}>
 					<Box className={styles.thumbnail_container}>
-						<Image src={post.thumbnail ? post.thumbnail : defaultThumbnail} 
+						<Image src={thumbnailSrc}
 						  alt={post.title} 
 						  width={0} 
 						  height={0} 
