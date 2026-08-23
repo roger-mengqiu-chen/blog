@@ -11,16 +11,18 @@ export const generateStaticParams = async () => {
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-  const post = getPostContent("project", slug);
+  const posts = getPostMetadata("src/data/project");
+  const postMeta = posts.find((p: { slug: string; }) => p.slug === slug);
 
   return {
     title: `Roger Chen's Project | ${slug}`,
-    description: post.data.description,
-  }
+    description: postMeta?.description ?? '',
+  };
 }
 
-const ProjectPage: React.FC<BlogPageProps> = ({ params }) => {
-  const { slug } = params;
+const ProjectPage: React.FC<BlogPageProps> = async ({ params }) => {
+  const { slug } = await params as { slug: string };
+
   return (
     <PostMain slug={slug} category="project"/>
   )
