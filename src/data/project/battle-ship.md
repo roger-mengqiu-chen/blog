@@ -17,4 +17,4 @@ Since I didn't spent much time in UI design, this game looks like from stone-age
 
 Here is a screenshot of the game:
 
-![recording](battle-ship/battle-ship-recording.gif)
+![recording](/images/battle-ship/battle-ship-recording.gif)

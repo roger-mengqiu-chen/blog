@@ -32,15 +32,15 @@ The app should have the following features:
 # Demo
 Below is the screen shot of adding an event:
 
-![demo-1](django-life-tracker/demo-1.png)
+![demo-1](/images/django-life-tracker/demo-1.png)
 
 Below is the header part of transactions page. It demonstrate the pie charts of last month's expenses and incomes:
 
-![demo-2](django-life-tracker/demo-2.png)
+![demo-2](/images/django-life-tracker/demo-2.png)
 
 Below is the screen shot of importing transactions:
 
-![demo-3](django-life-tracker/demo-3.png)
+![demo-3](/images/django-life-tracker/demo-3.png)
 
 # Future work
 

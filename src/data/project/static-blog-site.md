@@ -28,13 +28,13 @@ Since this site is just for demonstrating my life and projects, I won't spend mu
 
 The GIF below shows the site in action:
 
-![blog-site](blog-site/static-site-demo.gif)
+![blog-site](/images/blog-site/static-site-demo.gif)
 
 # Mobile version
 
 And the site also has mobile version
 
-![mobile-blog-site](blog-site/mobile-recording.gif)
+![mobile-blog-site](/images/blog-site/mobile-recording.gif)
 
 # More
 
