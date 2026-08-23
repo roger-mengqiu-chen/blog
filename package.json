@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:local": "NODE_ENV=local next build",
     "start": "next start",
     "lint": "next lint"
   },
