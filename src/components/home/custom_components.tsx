@@ -14,7 +14,7 @@ function normalizePublicAsset(src: string) {
   if (!src) return src;
   if (/^(https?:)?\/\//.test(src) || src.startsWith("#") || src.startsWith("data:")) return src;
   const cleaned = src.replace(/^(\.\/|\.\.\/)+/, "").replace(/^\/+/, "");
-  return `/images/${cleaned}`;
+  return `/${cleaned}`;
 }
 
 export const CustomImage = ({ src, alt }: CustomImageProps) => {
@@ -29,7 +29,6 @@ export const CustomLink = ({ href, children }: { href: string, children: React.R
       href && href.startsWith("/") && !href.startsWith(basePath)
           ? `${basePath}${href}`
           : href;
-
   return (
     <a href={safeHref} className={styles.link}>{children}</a>
   )
