@@ -6,7 +6,7 @@ import Image from 'next/image';
 import {normalizePublicAsset} from "@/utils/path_utils";
 
 export const Post: React.FC<PostMetadata> = (post: PostMetadata) => {
-	const defaultThumbnail = "/images/default-thumbnail.jpg";
+	const defaultThumbnail = "images/default-thumbnail.jpg";
 	const thumbnail = post.thumbnail ? post.thumbnail : defaultThumbnail;
 	const thumbnailSrc = normalizePublicAsset(thumbnail);
 	const category = post.category;

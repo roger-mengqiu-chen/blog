@@ -1,7 +1,9 @@
 export const basePath =
-    process.env.NEXT_PUBLIC_BASE_PATH ||
-    (process.env.NODE_ENV === "production" ? "/blog" : "/");
+    process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export const normalizePublicAsset = (src: string) => {
-    return `${basePath}${src.startsWith("/") ? src : `/${src}`}`;
+    console.log(`Normalizing asset path: ${src} with basePath: ${basePath}`);
+    const path = `${basePath}${src.startsWith("/") ? src : `/${src}`}`;
+    console.log(`Normalized asset path: ${path}`);
+    return path;
 }

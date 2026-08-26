@@ -3,7 +3,7 @@ import createMDX from '@next/mdx';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: process.env.NODE_ENV === "production" ? "/blog" : "",
+    basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
     trailingSlash: true,
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     output: 'export',

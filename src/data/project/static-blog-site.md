@@ -6,7 +6,7 @@ tags:
     - NextJS
     - MUI
 time: "2024-11-04 19:19:00"
-thumbnail: "/images/blog-site/blog-site-screen-shot.png"
+thumbnail: "images/blog-site/blog-site-screen-shot.png"
 ---
 
 If you want to skip reading the post, you can check the github repo [here](https://github.com/roger-mengqiu-chen/blog)
@@ -28,13 +28,13 @@ Since this site is just for demonstrating my life and projects, I won't spend mu
 
 The GIF below shows the site in action:
 
-![blog-site](/images/blog-site/static-site-demo.gif)
+![blog-site](images/blog-site/static-site-demo.gif)
 
 # Mobile version
 
 And the site also has mobile version
 
-![mobile-blog-site](/images/blog-site/mobile-recording.gif)
+![mobile-blog-site](images/blog-site/mobile-recording.gif)
 
 # More
 

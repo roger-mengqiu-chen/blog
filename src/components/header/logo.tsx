@@ -6,7 +6,8 @@ import {normalizePublicAsset} from "@/utils/path_utils";
 
 
 const Logo = () => {
-  const logoSrc = normalizePublicAsset("/icon.jpeg"); // Path to your logo image
+  const logoSrc = normalizePublicAsset("icon.jpeg"); // Path to your logo image
+  console.log('Logo source:', logoSrc); // Debugging line to check the logo source
   return (
     <Box className={styles.logoBox}>
       <Link href="/" passHref>
