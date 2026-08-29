@@ -42,12 +42,10 @@ export const ResponsiveAppBar = () => {
       <List>
         {navItems.map(({icon, item, link}) => (
           <ListItem key={item} disablePadding>
-            <Link href={link}>
-              <ListItemButton sx={{textAlign: 'center'}}>
-                {icon && <Box sx={{mr: 1}}>{icon}</Box>}
-                <ListItemText primary={item} sx={{fontSize: "1.2rem", fontWeight: "500"}}/>
-              </ListItemButton>
-            </Link>
+            <ListItemButton component={Link} href={link} sx={{textAlign: 'center'}}>
+              {icon && <Box sx={{mr: 1, display: 'flex', alignItems: 'center'}}>{icon}</Box>}
+              <ListItemText primary={item} sx={{fontSize: "1.2rem", fontWeight: "500"}}/>
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
@@ -75,11 +73,14 @@ export const ResponsiveAppBar = () => {
             </Box>
             <Box sx={{display: {xs: 'none', sm: 'flex'}, alignItems: 'center'}}>
               {navItems.map(({item, link}) => (
-                <Link key={item} href={link} passHref>
-                  <Button key={item} sx={{color: '#fff'}}>
-                    {item}
-                  </Button>
-                </Link>
+                <Button
+                  key={item}
+                  component={Link}
+                  href={link}
+                  sx={{color: '#fff'}}
+                >
+                  {item}
+                </Button>
               ))}
             </Box>
           </Box>
