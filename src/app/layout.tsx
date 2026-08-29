@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Article from "@/components/home/article";
-import { Box } from "@mui/material";
-import { GoogleAnalytics } from '@next/third-parties/google' 
+import {Box} from "@mui/material";
+import {GoogleAnalytics} from '@next/third-parties/google'
 import "./global.css"
 
 
@@ -13,28 +13,28 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css" precedence="default"
-        />
-      </head>
-      <body>
-        <Header />
-        <Box component="main" className="fly">
-          <Article>
-            {children}
-          </Article>
-        </Box>
-        <Footer />
-      </body>
-      <GoogleAnalytics gaId="G-D8TELP8YEW" />
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css" precedence="default"
+      />
+    </head>
+    <body>
+    <Header/>
+    <Box component="main" className="fly">
+      <Article>
+        {children}
+      </Article>
+    </Box>
+    <Footer/>
+    </body>
+    <GoogleAnalytics gaId="G-D8TELP8YEW"/>
     </html>
   );
 }
