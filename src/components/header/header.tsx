@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   AppBar,
   Box,
-  CssBaseline,
   Drawer,
   IconButton,
   List,
@@ -54,7 +53,6 @@ export const ResponsiveAppBar = () => {
 
   return (
     <>
-      <CssBaseline/>
       <AppBar component="nav" position="fixed" sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
         <Toolbar>
           <Box sx={{display: 'flex', justifyContent: 'space-between', flexGrow: 1, margin: 0}}>
