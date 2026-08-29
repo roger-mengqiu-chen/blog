@@ -2,9 +2,10 @@ import type {Metadata} from "next";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Article from "@/components/home/article";
-import {Box} from "@mui/material";
-import {GoogleAnalytics} from '@next/third-parties/google'
-import "./global.css"
+import {Box, CssBaseline} from "@mui/material";
+import {GoogleAnalytics} from '@next/third-parties/google';
+import {AppRouterCacheProvider} from '@mui/material-nextjs/v16-appRouter';
+import "./global.css";
 
 
 export const metadata: Metadata = {
@@ -26,15 +27,19 @@ export default function RootLayout({
       />
     </head>
     <body>
-    <Header/>
-    <Box component="main" className="fly">
-      <Article>
-        {children}
-      </Article>
-    </Box>
-    <Footer/>
+    <AppRouterCacheProvider>
+      <CssBaseline/>
+      <Header/>
+      <Box component="main" className="fly">
+        <Article>
+          {children}
+        </Article>
+      </Box>
+      <Footer/>
+    </AppRouterCacheProvider>
     </body>
     <GoogleAnalytics gaId="G-D8TELP8YEW"/>
     </html>
   );
 }
+
