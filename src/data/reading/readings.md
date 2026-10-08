@@ -16,4 +16,4 @@ time: "2025-12-17"
 | **Sapiens: A Brief History of Humankind** | _Yuval Noah Harari_ |
 | **Go Suck a Lemon: Strategies for Improving Your emotional Intelligence** | _Michael Cornwall_ |
 | **Flutter Design Patterns and Best Practices** | _Daria Orlova, Esra Kadah, Jaime Blasco, Mike Taylor_ |
-
+| **Pragmatic Thinking and Learning: Refactor Your Wetware** | _Andy Hunt_ |
